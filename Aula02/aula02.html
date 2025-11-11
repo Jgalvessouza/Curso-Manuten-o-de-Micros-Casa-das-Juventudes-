@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 2 – Revolução Eletrônica e Conceitos Básicos</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container">
+            <h1>Curso de Manutenção de Micros – Casa das Juventudes</h1>
+            <p class="subtitle">Aula 2 – Revolução Eletrônica e Conceitos Básicos</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="carousel">
+            <button class="nav prev" aria-label="Slide anterior">&#10094;</button>
+            <div class="slides" id="slides">
+                <!-- Slide 0 -->
+                <article class="slide" data-index="0" aria-hidden="false">
+                    <img src="img/eletrica.jpg" alt="Lei de Ohm e conceitos básicos" style="width: 380px;">
+                    <h2>Eletricidade o que é realmente ?</h2>
+                    <p>
+                        A eletricidade é a forma de energia gerada pelo movimento de partículas chamadas elétrons.
+                        Ela está presente em praticamente tudo ao nosso redor: desde o funcionamento de computadores e
+                        lâmpadas,
+                        até motores e circuitos eletrônicos.
+                        Compreender como ela surge, se move e pode ser controlada é o primeiro passo para entender o
+                        mundo da eletrônica e da manutenção de micros.
+                    </p>
+                </article>
+                
+                <!-- Slide 1 -->
+                <article class="slide" data-index="1" aria-hidden="false">
+                    <img src="img/ac.png" alt="Lei de Ohm e conceitos básicos" style="width: 380px;">
+                    <h2>Corrente Alternada (AC - Alternating Current)</h2>
+                    <p>
+                        Fluxo de elétrons: O sentido do fluxo de elétrons inverte periodicamente (geralmente 60 vezes
+                        por segundo no Brasil - 60 Hz). <br>
+                        Polaridade: Não possui polaridade fixa. <br>
+                        Onde é encontrada: Na rede elétrica que chega às residências, escritórios e indústrias
+                        (tomadas). <br>
+                        Vantagem: Mais eficiente para ser transmitida por longas distâncias e a tensão é facilmente
+                        alterada usando transformadores. <br>
+                        Desvantagem: Não pode ser armazenada em baterias (precisa ser convertida para DC). <br>
+                    </p>
+                </article>
+                <!-- Slide 2 -->
+                <article class="slide" data-index="2" aria-hidden="false">
+                    <img src="img/dc.png" alt="Lei de Ohm e conceitos básicos" style="width: 380px;">
+                    <h2>Corrente Contínua (DC - Direct Current)</h2>
+                    <p>
+                        Fluxo de elétrons: Ocorre em apenas uma direção, mantendo um fluxo constante. <br>
+
+                        Polaridade: Possui polaridade definida (positivo e negativo). <br>
+
+                        Onde é encontrada: Principalmente em pilhas, baterias, células solares e na maioria dos
+                        circuitos eletrônicos (após a conversão). <br>
+
+                        Vantagem: Estabilidade e ideal para eletrônicos sensíveis e armazenamento em baterias. <br>
+
+                        Desvantagem: Maior perda de energia em longas distâncias. <br>
+                    </p>
+                </article>
+                <!-- Slide 3 -->
+                <article class="slide" data-index="3" aria-hidden="false">
+                    <img src="img/whtas.png" alt="Lei de Ohm e conceitos básicos" style="width: 380px;">
+                    <h2>Entendendo a Eletricidade: Voltagem, Amperagem e Watts</h2>
+                    <p>
+                        A eletricidade é governada por três conceitos essenciais e interligados: a Voltagem (Volts - V),
+                        que é a pressão ou a força que empurra os elétrons; a Amperagem (Ampères - A), que é a
+                        quantidade ou o fluxo desses elétrons em movimento; e os( Watts - W ), que representam a Potência
+                        real, ou seja, a velocidade com que o trabalho é realizado ou a energia é consumida. Em
+                        essência, os Watts são o resultado da multiplicação da Voltagem pela Amperagem (W = V \
+                        A), demonstrando que a potência de um aparelho depende tanto da força com que a energia é
+                        empurrada quanto do volume de carga que está fluindo.
+                    </p>
+                </article>
+
+                
+                <!-- Slide 4 -->
+                <article class="slide" data-index="4" aria-hidden="false">
+                    <img src="img/macete-primeira-lei-ohm.webp" alt="Lei de Ohm e conceitos básicos"
+                        style="width: 380px;">
+                    <h2>Conceitos Fundamentais da Eletrônica</h2>
+                    <p><strong>Tensão (V):</strong> força que empurra os elétrons.<br>
+                        <strong>Corrente (I):</strong> fluxo de elétrons em um condutor.<br>
+                        <strong>Resistência (R):</strong> oposição à passagem da corrente.<br>
+                        <strong>Lei de Ohm:</strong> <br>
+                        <strong>Tensão (V)</strong> V = I × R 
+                        <strong>Corrente (I)</strong> I = <ruby>V <rt>R</rt></ruby> 
+                        <strong>Resistência (R)</strong> R = <ruby>I <rt>V</rt></ruby>
+                    </p>
+                </article>
+                <!-- Slide 5 -->
+                <article class="slide" data-index="5" aria-hidden="false">
+                    <img src="img/capacitores.png" alt="Lei de Ohm e conceitos básicos"
+                        style="width: 380px;">
+                    <h2>Capacitores</h2>
+                    <p>O capacitor é um componente eletrônico que funciona como um reservatório de energia temporário. <br>
+
+                        <strong>Estrutura:</strong> Consiste em duas placas condutoras separadas por um material isolante (dielétrico). <br>
+
+                        <strong>Função:</strong> Sua principal função é armazenar carga elétrica em um campo elétrico, liberando-a quando
+                        necessário. <br>
+
+                        <strong>Aplicações:</strong> São cruciais para suavizar e filtrar a tensão em fontes de alimentação e fornecer
+                        picos de energia (como na partida de motores).
+                    </p>
+                </article>
+
+                <!-- Slide 6 -->
+                <article class="slide" data-index="6" aria-hidden="true">
+                    <img src="img/resistor.png" alt="Resistor">
+                    <h2>Resistor</h2>
+                    <p>Componente que limita a passagem da corrente elétrica e controla a tensão. Identificado por
+                        faixas coloridas que indicam seu valor em Ohms (Ω). Usado para proteger LEDs e ajustar
+                        circuitos.</p>
+                </article>
+
+                <!-- Slide 7 -->
+                <article class="slide" data-index="7" aria-hidden="true">
+                    <img src="img/diodo.jpg" alt="Diodo">
+                    <h2>Diodo</h2>
+                    <p>Permite a passagem da corrente elétrica em apenas um sentido. É usado em fontes de alimentação
+                        para transformar corrente alternada (AC) em corrente contínua (DC).</p>
+                </article>
+
+                <!-- Slide 8 -->
+                <article class="slide" data-index="8" aria-hidden="true">
+                    <img src="img/transistors.png" alt="Transistor">
+                    <h2>Transistor</h2>
+                    <p>Inventado em 1947, substituiu as válvulas eletrônicas. Atua como amplificador ou chave
+                        eletrônica. Possui três terminais: Base (B), Coletor (C) e Emissor (E). É o coração dos
+                        processadores modernos.</p>
+                </article>
+
+                <!-- Slide 9 -->
+                <article class="slide" data-index="9" aria-hidden="true">
+                    <img src="img/dinamica.jpg" alt="Protoboard e circuito simples">
+                    <h2>Dinâmica “Caça ao Componente” </h2>
+                    
+                </article>
+            </div>
+            <button class="nav next" aria-label="Próximo slide">&#10095;</button>
+            <div class="dots" id="dots"></div>
+        </section>
+
+        <section class="notes card">
+            <h3>Curiosidades</h3>
+            <ul>
+                <li><a href="ohn.html">Revisar a Lei de Ohm e montar circuitos.</a></li>
+                <li><a href="potencial.html">Voltagem, Amperagem e Watts.</a></li>
+                <li><a href="dimaica.html">Dinâmica “Caça ao Componente</a></li>
+                
+            </ul>
+        </section>
+    </main>
+
+    <footer class="topbar">
+        <div class="container">
+            <small>Material preparado para o curso de Manutenção de Micros — JG</small>
+        </div>
+    </footer>
+
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Montagem e Manutenção de Micros</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --azul: #1a73e8;
+            --bg: #f5f7fa;
+            --branco: #fff;
+            --texto: #222;
+            --sombra: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--texto);
+        }
+
+        /* ===== CABEÇALHO ===== */
+        header {
+            background-image: url('img/reader.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #fff;
+            box-shadow: var(--sombra);
+            color: var(--branco);
+            padding: 15px 30px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav a {
+            color: var(--branco);
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* ===== MENU SUSPENSO ===== */
+        .submenu {
+            display: none;
+            position: absolute;
+            background: var(--branco);
+            color: var(--texto);
+            top: 35px;
+            left: 0;
+            min-width: 220px;
+            border-radius: 8px;
+            box-shadow: var(--sombra);
+            overflow: hidden;
+            z-index: 20;
+        }
+
+        .submenu a {
+            display: block;
+            padding: 10px 15px;
+            color: var(--texto);
+            border-bottom: 1px solid #eee;
+            text-decoration: none;
+        }
+
+        .submenu a:hover {
+            background: #f0f6ff;
+            color: var(--azul);
+        }
+
+        /* MOSTRA O MENU QUANDO ESTIVER ATIVO */
+        .submenu.active {
+            display: block;
+        }
+
+
+        nav ul li:hover .submenu {
+            display: block;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            margin-top: 90px;
+            text-align: center;
+            background: var(--branco);
+            box-shadow: var(--sombra);
+            max-width: 1200px;
+            margin-inline: auto;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin: 20px 0 10px;
+            color: var(--azul);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 30px;
+        }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width:768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== CABEÇALHO ===== -->
+    <header>
+        <h1>Curso de Manutenção de Micros</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li>
+                    <a href="#">Aulas ▾</a>
+                    <div class="submenu">
+                        <a href="Aula01/aula01.html">Aula 1 – História dos Computadores</a>
+                        <a href="Aula02/aula02.html">Aula 2 – Eletrônica Básica</a>
+                        <a href="Aula03/aula03.html">Aula 3 – Fontes ATX</a>
+                        <a href="Aula04/aula04.html">Aula 4 – Placa-Mãe</a>
+                        <a href="">Aula 5 - </a>
+                    </div>
+                </li>
+                <li><a href="#">Sobre o Curso</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== IMAGEM DE DESTAQUE ===== -->
+    <section class="hero">
+        <img src="img/bg2.png" alt="Curso de Montagem e Manutenção de Micros">
+        <h2>Bem-vindo ao Curso de Manutenção de Micros</h2>
+        <p>Aprenda desde os fundamentos da eletrônica até a manutenção completa de computadores, fontes e placas.</p>
+    </section>
+
+    <footer>
+        © 2025 Curso de Manutenção de Micros – JG
+    </footer>
+
+    <!-- ===== SCRIPT JS ===== -->
+    <script>
+        // Seleciona o item "Aulas" e o submenu
+        const dropdownLink = document.querySelector('nav ul li:nth-child(2) > a');
+        const submenu = document.querySelector('.submenu');
+
+        // Ao clicar em "Aulas", abre ou fecha o menu
+        dropdownLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            submenu.classList.toggle('active');
+        });
+
+        // Fecha o submenu se clicar fora dele
+        document.addEventListener('click', (e) => {
+            const isClickInsideMenu = submenu.contains(e.target) || dropdownLink.contains(e.target);
+            if (!isClickInsideMenu) {
+                submenu.classList.remove('active');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

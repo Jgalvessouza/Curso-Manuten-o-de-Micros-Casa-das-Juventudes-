@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aula Prática – Fonte ATX (Esquema e Diagnóstico)</title>
+  <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --accent: #1367c9;
+      --muted: #5b6b7a;
+      --radius: 12px;
+      --container: 1200px;
+      --text: #111827;
+      --shadow: 0 8px 24px rgba(8, 18, 51, 0.06);
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 20px
+    }
+
+    .topbar {
+      background-image: url('../img/reader.png');
+      background-size: cover;
+      /* cobre toda a tela */
+      background-repeat: no-repeat;
+      /* não repete a imagem */
+      background-position: center;
+      color: #fff;
+      padding: 18px 0;
+      margin-bottom: 18px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(19, 103, 201, 0.12);
+    }
+
+    .subtitle {
+      opacity: 0.95;
+      margin: 6px 0 0
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 18px
+    }
+
+    @media (max-width:920px) {
+      main {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .card {
+      background: var(--card);
+      padding: 18px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0 0 10px
+    }
+
+    h2 {
+      color: var(--accent)
+    }
+
+    p {
+      color: var(--muted);
+      margin: 8px 0
+    }
+
+    .section {
+      margin-bottom: 18px
+    }
+
+    .highlight {
+      background: #f0f7ff;
+      border-left: 4px solid var(--accent);
+      padding: 10px;
+      border-radius: 8px
+    }
+
+    .codebox {
+      background: #0b1220;
+      color: #e6f0ff;
+      padding: 12px;
+      border-radius: 8px;
+      overflow: auto;
+      font-family: monospace;
+      font-size: 13px
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px
+    }
+
+    th,
+    td {
+      padding: 8px;
+      border: 1px solid #eef4fb;
+      text-align: left
+    }
+
+    th {
+      background: #f7fbff;
+      color: var(--accent)
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 8px;
+      box-shadow: 0 6px 12px rgba(19, 103, 201, 0.12)
+    }
+
+    .safety {
+      background: #fff7f7;
+      border-left: 4px solid #ff4d4f;
+      padding: 10px;
+      border-radius: 8px;
+      color: #6b2b2b
+    }
+
+    footer {
+      margin-top: 18px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px
+    }
+
+    .toggle {
+      cursor: pointer;
+      color: var(--accent);
+      font-weight: 600
+    }
+
+    .small {
+      font-size: 13px;
+      color: #6b7280
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1>Curso de Manutenção de Micros – Casa das Juventudes</h1>
+      <p class="subtitle">Prática: Esquema e Diagnóstico de Fonte ATX (300W) — guia traduzido</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="card">
+      <section class="section">
+        <h2>Resumo Traduzido do Esquema</h2>
+        <p>Este documento explica, de forma didática, as principais partes do esquema de uma <strong>fonte ATX (300W,
+            half-bridge)</strong>: entrada AC e filtro EMI, retificação, primária (controle PWM e chaveamento),
+          transformador principal, retificadores secundários e circuitos de feedback/5VSB.</p>
+        <div class="highlight">
+          <strong>Visão rápida:</strong> AC → filtro EMI → retificação (DC ~300V) → PWM + transistores → transformador
+          isolador → retificação secundária → saídas +3.3V, +5V, +12V, +5VSB.
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Entrada AC e Filtro EMI</h3>
+        <p><strong>Função:</strong> filtrar ruídos e proteger contra interferências; preparar a rede para retificação.
+        </p>
+        <p class="small"><strong>Componentes típicos:</strong> capacitores X/Y, bobinas (chokes), fusível, NTC (inrush
+          current limiter).</p>
+      </section>
+
+      <section class="section">
+        <h3>Retificação e Capacitores da Primária</h3>
+        <p>Após o filtro, a tensão AC é retificada por uma ponte que gera uma tensão DC alta. Os capacitores grandes
+          fazem o “suavizado” e armazenam energia (podem ficar com ~160VDC em entrada 110V, ou ~320VDC em 220V).</p>
+        <div class="safety">
+          <strong>Atenção:</strong> capacitores da primária mantêm carga perigosa mesmo com a fonte desligada — não
+          toque sem descarregar corretamente.
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Controle PWM e Chaveamento (Primária)</h3>
+        <p>O CI PWM (controlador) comuta transistores (topologia half-bridge) para entregar pulsos ao transformador
+          principal. A frequência e largura do pulso definem a potência transferida.</p>
+        <p class="small">Exemplos de ICs: <em>UC3842, TL494</em> (apenas como referência).</p>
+      </section>
+
+      <section class="section">
+        <h3>Transformador Principal e Saídas Secundárias</h3>
+        <p>O transformador isola e gera enrolamentos para cada tensão de saída. Cada enrolamento tem seu diodo de
+          retificação (geralmente Schottky) e filtro LC para estabilizar a tensão.</p>
+        <p><strong>Saídas típicas:</strong> +3.3V, +5V, +12V, −12V, −5V, +5VSB.</p>
+      </section>
+
+      <section class="section">
+        <h3>Feedback e Regulação</h3>
+        <p>Um circuito de feedback na secundária (via opto-isolador) informa ao PWM sobre a tensão correta. Em algumas
+          fontes, um magamp ajusta a saída de 3.3V para maior estabilidade.</p>
+      </section>
+
+      <section class="section">
+        <h2>Caminho das Tensões (passo a passo)</h2>
+        <ol>
+          <li><strong>AC de rede (110/220V)</strong> entra pelo conector e passa pelo filtro EMI.</li>
+          <li><strong>Ponte retificadora</strong> converte AC → DC (alta tensão).</li>
+          <li><strong>Capacitores</strong> suavizam formando ~160VDC ou ~320VDC.</li>
+          <li><strong>PWM + transistores</strong> comutam essa DC em pulsos para o transformador principal.</li>
+          <li><strong>Transformador</strong> entrega tensões isoladas para cada enrolamento.</li>
+          <li><strong>Diodos e indutores</strong> retificam e filtram as saídas: +3.3V, +5V, +12V, etc.</li>
+          <li><strong>Feedback</strong> (optoacoplador) ajusta o PWM para manter as tensões dentro das faixas.</li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <h2>Tabela Rápida de Verificações (Multímetro)</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Verificação</th>
+              <th>Onde medir</th>
+              <th>Valor esperado</th>
+              <th>Indica problema se...</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tensão do capacitor principal</td>
+              <td>Após ponte retificadora</td>
+              <td>~160V (110V) / ~320V (220V)</td>
+              <td>Tensão muito baixa ou zero → ponte ou capacitores defeituosos</td>
+            </tr>
+            <tr>
+              <td>5VSB</td>
+              <td>Fio roxo (conector ATX)</td>
+              <td>~5V</td>
+              <td>0V → circuito standby defeituoso</td>
+            </tr>
+            <tr>
+              <td>PS_ON estado</td>
+              <td>Fio verde / massa</td>
+              <td>Ao ativar, PS_ON deve ser puxado a 0V pela placa-mãe</td>
+              <td>Não cai a 0V → placa-mãe não aciona ou botão não funciona</td>
+            </tr>
+            <tr>
+              <td>+12V</td>
+              <td>Fio amarelo</td>
+              <td>~12V ±5%</td>
+              <td>0V ou fora de faixa → diodo secundário, indutor ou circuito de regulação</td>
+            </tr>
+            <tr>
+              <td>+5V</td>
+              <td>Fio vermelho</td>
+              <td>~5V ±5%</td>
+              <td>Flutuação → problema em feedback/magamp ou capacitores</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Dicas de Diagnóstico e Procedimentos de Bancada</h2>
+        <ul>
+          <li>Sempre descarregue capacitores antes de tocar na placa (use resistor de descarga apropriado).</li>
+          <li>Use o modo diodo do multímetro para testar diodos rápidos (Schottky) nos secundários.</li>
+          <li>Se a fonte liga e desliga rapidamente, verifique os capacitores de saída e o circuito de feedback.</li>
+          <li>Meça a tensão do capacitor principal com cuidado — se baixa, a ponte ou o NTC pode estar com problema.
+          </li>
+          <li>Verifique o fusível e o NTC antes de aplicar energia — são falhas comuns em sucatas.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Notas de Segurança</h2>
+        <div class="safety">
+          <strong>Perigo de choque:</strong> a seção primária contém tensões perigosas (>100V DC). Só técnicos treinados
+          devem abrir fontes e medir a primária. Trabalhe com a fonte desconectada e descarregada sempre que possível.
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Material Complementar</h2>
+        <p>Esquema original (PDF): <a class="btn" href="https://www.smpspowersupply.com/ATX_power_supply_schematic.pdf" target="_blank"
+            rel="noopener noreferrer">Baixar esquema ATX (PDF)</a></p>
+      </section>
+
+      <section class="section">
+        <h2>Exercício de Bancada (Sugestão)</h2>
+        <ol>
+          <li>Em grupo, abra uma fonte sucata (desenergizada) e identifique resistores, diodos, transistores,
+            capacitores e o transformador.</li>
+          <li>Com o multímetro em modo continuidade, siga uma trilha do conector ATX até o componente correspondente e
+            anote observações.</li>
+          <li>Meça as tensões de saída (+5VSB, +5V, +12V) com a fonte ligada em bancada (se tiver condição segura) e
+            registre desvios.</li>
+          <li>Relate qual componente você suspeita estar defeituoso e justifique o diagnóstico.</li>
+        </ol>
+      </section>
+    </article>
+
+    <aside class="card">
+      <h3>Checklist rápido antes de ligar a fonte</h3>
+      <ul>
+        <li>Fuse não aberto</li>
+        <li>NTC e resistores de entrada visíveis sem dano</li>
+        <li>Sem capacitores estufados ou vazando</li>
+        <li>Sem trilhas queimadas</li>
+      </ul>
+
+      <h3 style="margin-top:12px">Tempo estimado</h3>
+      <p class="small">Inspeção visual e identificação: 25–30 min • Medições básicas: 20–30 min • Discussão/diagnóstico:
+        20 min</p>
+
+      <h3 style="margin-top:12px">Referências</h3>
+      <ul class="small">
+        <li>Esquema ATX anotado — SMPSPowerSupply</li>
+        <li>Guias de segurança e uso de multímetro</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>Material preparado para o curso de Manutenção de Micros — JG</small>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dicas de Teste com Multímetro</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --bg: #f5f7fb;
+            --card: #ffffff;
+            --accent: #1367c9;
+            --muted: #5b6b7a;
+            --radius: 12px;
+            --container: 1200px;
+            --text: #111827;
+            --shadow: 0 8px 24px rgba(8, 18, 51, 0.06);
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 20px
+        }
+
+        .topbar {
+            background-image: url('../img/reader.png');
+            background-size: cover;
+            /* cobre toda a tela */
+            background-repeat: no-repeat;
+            /* não repete a imagem */
+            background-position: center;
+            color: #fff;
+            padding: 18px 0;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(19, 103, 201, 0.12);
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            opacity: 0.95;
+            margin: 6px 0 0
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px
+        }
+
+        @media (max-width:920px) {
+            main {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .card {
+            background: var(--card);
+            padding: 18px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0 0 10px
+        }
+
+        h2 {
+            color: var(--accent)
+        }
+
+        p {
+            color: var(--muted);
+            margin: 8px 0
+        }
+
+        ul,
+        ol {
+            margin-left: 18px
+        }
+
+        .highlight {
+            background: #f0f7ff;
+            border-left: 4px solid var(--accent);
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px
+        }
+
+        .safety {
+            background: #fff7f7;
+            border-left: 4px solid #ff4d4f;
+            padding: 10px;
+            border-radius: 8px;
+            color: #6b2b2b;
+            margin-top: 10px
+        }
+
+        .codebox {
+            background: #0b1220;
+            color: #e6f0ff;
+            padding: 12px;
+            border-radius: 8px;
+            overflow: auto;
+            font-family: monospace;
+            font-size: 13px
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px
+        }
+
+        th,
+        td {
+            padding: 8px;
+            border: 1px solid #eef4fb;
+            text-align: left
+        }
+
+        th {
+            background: #f7fbff;
+            color: var(--accent)
+        }
+
+        .small {
+            font-size: 13px;
+            color: #6b7280
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            font-size: 13px;
+            margin: 25px 0
+        }
+    </style>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container">
+            <h1>Curso de Manutenção de Micros – Casa das Juventudes</h1>
+            <p class="subtitle">Material de Apoio – Dicas de Teste com Multímetro</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="card">
+            <section class="section">
+                <h2>Introdução</h2>
+                <p>O <strong>multímetro</strong> é a ferramenta essencial para qualquer técnico. Ele permite medir
+                    tensão, corrente, resistência e testar componentes eletrônicos como diodos, transistores e
+                    capacitores.</p>
+                <div class="highlight">
+                    🎯 <strong>Objetivo:</strong> aprender os principais modos de medição e interpretar resultados com
+                    segurança.
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Modos Principais de Uso</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Função</th>
+                            <th>Símbolo</th>
+                            <th>Aplicação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tensão Contínua (DCV)</td>
+                            <td>V⎓</td>
+                            <td>Medir voltagem de fontes, baterias e circuitos digitais</td>
+                        </tr>
+                        <tr>
+                            <td>Tensão Alternada (ACV)</td>
+                            <td>V~</td>
+                            <td>Medir energia de tomadas ou saídas AC</td>
+                        </tr>
+                        <tr>
+                            <td>Resistência</td>
+                            <td>Ω</td>
+                            <td>Verificar resistores e continuidade de trilhas</td>
+                        </tr>
+                        <tr>
+                            <td>Continuidade</td>
+                            <td>🔊</td>
+                            <td>Testar fios, cabos e conexões (bipe sonoro)</td>
+                        </tr>
+                        <tr>
+                            <td>Diodo</td>
+                            <td>►|─</td>
+                            <td>Verificar polarização de diodos e LEDs</td>
+                        </tr>
+                        <tr>
+                            <td>Corrente (A)</td>
+                            <td>A⎓ / A~</td>
+                            <td>Medir consumo de energia (uso avançado)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="section">
+                <h2>Testes Práticos com Componentes</h2>
+                <h3>🔹 Resistores</h3>
+                <p>Coloque o multímetro em modo <strong>Ω</strong> e toque nas duas pontas do resistor. O valor exibido
+                    deve ser próximo ao indicado pelas faixas de cor.</p>
+                <h3>🔹 Diodos e LEDs</h3>
+                <p>Use o modo <strong>diodo</strong>. No sentido direto, o multímetro mostrará uma queda de tensão
+                    (~0.6–0.8V); no sentido inverso, deve exibir “OL”.</p>
+                <h3>🔹 Capacitores</h3>
+                <p>Em modo continuidade, o valor sobe e volta a zero – indica carregamento. Se apitar direto, está em
+                    curto; se não reage, está aberto.</p>
+                <h3>🔹 Transistores</h3>
+                <p>Use o modo diodo para verificar as junções base-coletor e base-emissor. Ambas devem conduzir em um
+                    sentido apenas.</p>
+            </section>
+
+            <section class="section">
+                <h2>Medindo Tensão em Circuitos</h2>
+                <ol>
+                    <li>Coloque o seletor em <strong>V⎓</strong> (para fontes DC ou placas eletrônicas).</li>
+                    <li>Conecte o <strong>fio preto no COM</strong> e o <strong>vermelho em VΩmA</strong>.</li>
+                    <li>Encoste a ponta preta no GND e a vermelha no ponto de teste.</li>
+                    <li>Leia o valor exibido e compare com o esperado.</li>
+                </ol>
+            </section>
+
+            <section class="section">
+                <h2>Dicas Rápidas de Diagnóstico</h2>
+                <ul>
+                    <li>Verifique primeiro a continuidade de fusíveis e cabos.</li>
+                    <li>Ao medir capacitores, descarregue-os antes.</li>
+                    <li>Em placas com fonte ATX, comece pelo fio roxo (5VSB).</li>
+                    <li>Teste sempre componentes fora da placa, se possível.</li>
+                    <li>Compare medições com uma placa funcional.</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>Cuidados e Segurança</h2>
+                <div class="safety">
+                    ⚠️ <strong>Nunca meça tensão AC na escala DC</strong> — risco de dano ao aparelho.<br>
+                    ⚡ Evite tocar nas pontas metálicas das sondas durante medições.<br>
+                    🔋 Verifique sempre se o multímetro está na escala correta antes de medir.
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Exercício Prático</h2>
+                <ol>
+                    <li>Com o multímetro, identifique 3 resistores diferentes e registre os valores medidos.</li>
+                    <li>Teste um diodo e um LED em ambos os sentidos.</li>
+                    <li>Localize e meça o valor de um capacitor eletrolítico em uma placa sucata.</li>
+                    <li>Compare com os valores nominais e discuta possíveis variações.</li>
+                </ol>
+            </section>
+        </article>
+
+        <aside class="card">
+            <h3>Checklist de Teste</h3>
+            <ul>
+                <li>Fios e pontas em bom estado</li>
+                <li>Escala correta selecionada</li>
+                <li>Bateria interna do multímetro carregada</li>
+                <li>Placa ou componente desenergizado</li>
+            </ul>
+
+        </aside>
+    </main>
+
+    <footer>
+        <div class="container">
+            <small>Material preparado para o curso de Manutenção de Micros — JG</small>
+        </div>
+    </footer>
+
+    <script>
+        // Interatividade simples – exibe dicas aleatórias
+        const dicas = [
+            "Use o modo continuidade para achar trilhas rompidas.",
+            "Teste fusíveis antes de suspeitar da fonte.",
+            "Compare a leitura com o valor nominal do componente.",
+            "Em resistores muito pequenos, evite segurar nas pontas (pode alterar o valor)."
+        ];
+        const msg = dicas[Math.floor(Math.random() * dicas.length)];
+        console.log("💡 Dica rápida:", msg);
+    </script>
+</body>
+
+</html>

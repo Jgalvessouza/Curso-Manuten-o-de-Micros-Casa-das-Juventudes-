@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 3 – Fontes ATX e Diagnóstico de Alimentação</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container">
+            <h1>Curso de Manutenção de Micros – Casa das Juventudes</h1>
+            <p class="subtitle">Aula 3 – Fontes ATX: Estrutura, Funcionamento e Diagnóstico</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="carousel">
+            <button class="nav prev" aria-label="Slide anterior">&#10094;</button>
+            <div class="slides" id="slides">
+
+                <!-- Slide 1 -->
+                <article class="slide" data-index="0" aria-hidden="false">
+                    <img src="img/fonte.jpg" alt="Fonte ATX aberta" style="width: 380px;">
+                    <h2>Fonte ATX</h2>
+                    <p>
+                        A fonte ATX é responsável por converter a energia elétrica da rede (110V ou 220V AC)
+                        em tensões contínuas (DC) utilizadas pelos componentes do computador. Ela fornece energia
+                        estável e segura para a placa-mãe, processador, memórias, discos e periféricos.
+                    </p>
+                </article>
+
+                <!-- Slide 2 -->
+                <article class="slide" data-index="1" aria-hidden="true">
+                    <img src="img/prina.jpg" alt="Estrutura da fonte ATX" style="width: 380px;">
+                    <h2>Estrutura da Fonte ATX</h2>
+                    <p>
+                        A fonte ATX é dividida em duas regiões principais:
+                        <br><strong>Primária:</strong> Trabalha com alta tensão (110/220V AC), contendo fusível, NTC,
+                        ponte retificadora e capacitores.
+                        <br><strong>Secundária:</strong> Gera as saídas DC (+3.3V, +5V, +12V), filtradas por diodos
+                        rápidos e capacitores.
+                        <br>Entre elas há o <strong>transformador principal</strong> e o <strong>circuito PWM</strong>
+                        de controle.
+                    </p>
+                </article>
+
+                <!-- Slide 3 -->
+                <article class="slide" data-index="2" aria-hidden="true">
+                    <img src="img/conector_fonte.jpg" alt="Conector ATX 24 pinos" style="width: 380px;">
+                    <h2>Conector ATX 24 Pinos</h2>
+                    <p>
+                        O conector principal da fonte possui fios coloridos, cada um com uma tensão específica:
+                        <br><strong style="color: yellow;">Amarelo:</strong> +12V – CPU, ventoinhas e HDs.<br>
+                        <strong style="color: red;">Vermelho:</strong> +5V – Circuitos lógicos.<br>
+                        <strong style="color: orangered;">Laranja:</strong> +3.3V – Chipset e memória.<br>
+                        <strong style="color: black;">Preto:</strong> GND (terra).<br>
+                        <strong style="color: green;">Verde:</strong> PS-ON (ativa a fonte).<br>
+                        <strong style="color: purple;">Roxo:</strong> +5VSB (standby).<br>
+                        <strong style="color: gray;">Cinza:</strong> Power Good (sinal de estabilidade).
+                    </p>
+                </article>
+
+                <!-- Slide 4 -->
+                <article class="slide" data-index="3" aria-hidden="true">
+                    <img src="img/teste.jpg" alt="Teste de fonte com multímetro" style="width: 380px;">
+                    <h2>Testando a Fonte ATX</h2>
+                    <p>
+                        Para testar uma fonte ATX:
+                        <br>1️⃣ Faça o curto entre o fio <strong style="color: green;">verde (PS-ON)</strong> e um fio <strong>preto
+                            (GND)</strong> – isso liga a fonte.
+                        <br>2️⃣ Meça as tensões com o multímetro:
+                        <br>• +12V (fio <strong style="color: yellow;">amarelo</strong>)
+                        <br>• +5V (fio <strong style="color: red;">vermelho</strong>)
+                        <br>• +3.3V (fio <strong style="color: orangered;">laranja</strong>)
+                        <br>3️⃣ O fio <strong style="color: blueviolet;">roxo (+5VSB)</strong> deve ter tensão mesmo com a fonte desligada.
+                    </p>
+                </article>
+
+                <!-- Slide 5 -->
+                <article class="slide" data-index="4" aria-hidden="true">
+                    <img src="img/pwm.jpg" alt="Circuito de feedback óptico" style="width: 380px;">
+                    <h2>Circuito de Controle e Feedback</h2>
+                    <p>
+                        O <strong>circuito PWM</strong> controla a chaveamento dos transistores, ajustando a energia
+                        enviada
+                        ao transformador. O <strong>optoacoplador</strong> envia informações da parte secundária para o
+                        controlador, mantendo as tensões estáveis e protegendo o sistema contra sobrecarga.
+                    </p>
+                </article>
+                <!-- Slide 6 -->
+                <article class="slide" data-index="5" aria-hidden="true">
+                    <img src="img/prima_def.jpg" alt="Componentes da parte primária da fonte ATX"
+                        style="width: 380px;">
+                    <h2>Principais Defeitos na Parte Primária</h2>
+                    <p>
+                        ⚡ <strong>Fusível queimado:</strong> Indica curto na entrada ou nos transistores de
+                        chaveamento.<br>
+                        💡 <strong>Diodos da retificação abertos ou em curto:</strong> Impedem a conversão correta de AC
+                        para DC.<br>
+                        🔋 <strong>Capacitor principal estufado:</strong> Provoca instabilidade na tensão de 300V
+                        DC.<br>
+                        🔥 <strong>Transistor de chaveamento queimado:</strong> Causa curto direto, geralmente
+                        acompanhado de fusível rompido.<br>
+                        💥 <strong>NTC aberto:</strong> A fonte não parte, pois o circuito de partida fica
+                        interrompido.<br>
+                        ⚙️ <strong>Ponte retificadora com fuga:</strong> A tensão na primária cai e o PWM não
+                        oscila.<br>
+                        🧩 <strong>CI PWM queimado:</strong> A fonte não inicia nem gera o sinal de chaveamento.
+                    </p>
+                </article>
+
+                <!-- Slide 7 -->
+                <article class="slide" data-index="6" aria-hidden="true">
+                    <img src="img/secu_def.jpg" alt="Capacitores e componentes queimados" style="width: 380px;">
+                    <h2>Principais Defeitos na Parte secudaria</h2>
+                    <p>
+                        💥 <strong>Fonte liga e desliga:</strong> Capacitores secos ou circuito de feedback
+                        defeituoso.<br>
+                        ⚡ <strong>Sem 5VSB:</strong> Falha no circuito standby.<br>
+                        🔌 <strong>Sem 12V:</strong> MOSFETs ou diodos de saída queimados.<br>
+                        🔊 <strong>Ruído alto:</strong> Falta de filtragem ou capacitor principal com ESR alto.
+                    </p>
+                </article>
+
+                <!-- Slide 8 -->
+                <article class="slide" data-index="7" aria-hidden="true">
+                    <img src="img/font_aber.jpg" alt="Prática com fonte ATX aberta" style="width: 380px;">
+                    <h2>Prática: Identificação de Componentes</h2>
+                    <p>
+                        Utilize fontes sucata e identifique:
+                        <br>• Fusível e NTC (proteção de entrada)
+                        <br>• Ponte retificadora e capacitores
+                        <br>• Transformador e diodos de saída
+                        <br>• Circuito PWM e optoacoplador
+                        <br>• Cooler e sensor térmico
+                    </p>
+                </article>
+
+                <!-- Slide 9 -->
+                <article class="slide" data-index="8" aria-hidden="true">
+                    <img src="img/perigo.jpg" alt="Segurança elétrica" style="width: 380px;">
+                    <h2>Segurança ao Trabalhar com Fontes</h2>
+                    <p>
+                        ⚠️ A região primária da fonte contém tensões perigosas acima de 300V.
+                        <br>Descarregue os capacitores antes de tocar na placa.
+                        <br>Evite medir a primária energizada.
+                        <br>Use luvas e ferramentas isoladas.
+                    </p>
+                </article>
+
+                <!-- Slide 10 -->
+                <article class="slide" data-index="9" aria-hidden="true">
+                    <img src="img/fonte_fnal.jpg" alt="Conclusão" style="width: 380px;">
+                    <h2>Conclusão</h2>
+                    <p>
+                        A fonte ATX é essencial para o funcionamento do computador.
+                        Nesta aula, aprendemos sobre suas partes, como testar tensões e identificar defeitos.
+                        Essa base será importante para entender o papel da fonte na alimentação da placa-mãe
+                        e demais componentes.
+                    </p>
+                </article>
+
+            </div>
+            <button class="nav next" aria-label="Próximo slide">&#10095;</button>
+            <div class="dots" id="dots"></div>
+        </section>
+
+        <section class="notes card">
+            <h3>Material Complementar</h3>
+            <ul>
+                <li><a href="https://www.smpspowersupply.com/ATX_power_supply_schematic.pdf" target="_blank">Esquema
+                        Elétrico ATX</a></li>
+                <li><a href="https://youtu.be/5gLOzlnF3fI?si=396kj0sl1zWU-Lom" target="_blank">Como funciona uma Fonte ATX</a></li>
+                <li><a href="dicas_mutimetro.html" target="_blank">Dicas para uso do Mutimetro.</a></li>
+                <li><a href="font_pratica.html" target="_blank">Prática</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="topbar">
+        <div class="container">
+            <small>Material preparado para o curso de Manutenção de Micros — JG</small>
+        </div>
+    </footer>
+
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>

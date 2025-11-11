@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão da Lei de Ohm</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .formula {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.5em;
+            margin: 15px 0;
+            font-family: monospace;
+            color: #003366;
+        }
+        .subtitulo {
+            color: #28a745;
+            font-weight: bold;
+        }
+        /* Estilos da Calculadora */
+        .calculator {
+            background: #d4edda;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #c3e6cb;
+            margin-top: 20px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #155724;
+        }
+        .input-group input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #81c784;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            font-weight: bold;
+            display: none; /* Inicialmente oculto */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Revisão da Lei de Ohm: O Alicerce da Eletricidade</h1>
+
+    <div class="section">
+        <h2>1ª Lei de Ohm (Relação Fundamental)</h2>
+        <p>A **Primeira Lei de Ohm** estabelece a relação entre Tensão, Corrente e Resistência em um circuito de resistência constante (ôhmico).</p>
+
+        <p class="subtitulo">Enunciado:</p>
+        <blockquote>
+            A intensidade da corrente elétrica 'I' é  diretamente proporcional  à Tensão 'V' e inversamente proporcional à Resistência 'R'.
+        </blockquote>
+
+        <p class="subtitulo">Fórmula Principal (Ohm):</p>
+        <div class="formula">
+            V = R \ I
+        </div>
+        <ul>
+            <li>V (Volt) - Tensão (ou ddp)</li>
+            <li>R (Ohm ) - Resistência</li>
+            <li>I (Ampère) - Corrente</li>
+        </ul>
+
+        <div class="calculator">
+            <h3>Calculadora da 1ª Lei de Ohm</h3>
+            <p>Preencha quaisquer dois campos para calcular o terceiro.</p>
+            
+            <div class="input-group">
+                <label for="inputV">Tensão (V):</label>
+                <input type="number" id="inputV" placeholder="Ex: 12">
+            </div>
+            
+            <div class="input-group">
+                <label for="inputR">Resistência (R - Ω):</label>
+                <input type="number" id="inputR" placeholder="Ex: 4">
+            </div>
+            
+            <div class="input-group">
+                <label for="inputI">Corrente (I - A):</label>
+                <input type="number" id="inputI" placeholder="Ex: 3">
+            </div>
+            
+            <button onclick="calcularOhm()" style="background-color: #28a745; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em;">Calcular</button>
+            <button onclick="limparCampos()" style="background-color: #dc3545; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; font-size: 1em;">Limpar</button>
+
+            <div id="resultadoOhm" class="result"></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="section">
+        <h2>2ª Lei de Ohm (Geometria e Material)</h2>
+        <p>A **Segunda Lei de Ohm** define a Resistência Elétrica de um condutor com base em suas propriedades físicas.</p>
+
+        <p class="subtitulo">Enunciado:</p>
+        <blockquote>
+            A Resistência ($\text{R}$) é diretamente proporcional à **Resistividade ($\rho$)** e ao **Comprimento ($\text{L}$)**, e inversamente proporcional à **Área de Seção Transversal ($\text{A}$)**.
+        </blockquote>
+
+        <p class="subtitulo">Fórmula da Resistência:</p>
+        <div class="formula">
+            $$\text{R} = \rho \cdot \frac{\text{L}}{\text{A}}$$
+        </div>
+
+        <ul>
+            <li>$\text{R}$ (Ohm - $\Omega$) - Resistência Elétrica</li>
+            <li>$\rho$ (Ohm-metro - $\Omega \cdot \text{m}$) - Resistividade (depende do material)</li>
+            <li>$\text{L}$ (metro - $\text{m}$) - Comprimento do condutor</li>
+            <li>$\text{A}$ (metro quadrado - $\text{m}^2$) - Área da Seção Transversal</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function calcularOhm() {
+        // Obter valores dos campos de entrada
+        let V = parseFloat(document.getElementById('inputV').value);
+        let R = parseFloat(document.getElementById('inputR').value);
+        let I = parseFloat(document.getElementById('inputI').value);
+        
+        let resultadoElement = document.getElementById('resultadoOhm');
+        resultadoElement.style.display = 'block';
+        resultadoElement.className = 'result'; // Reseta o estilo para o padrão de erro
+        
+        let count = 0;
+        if (!isNaN(V)) count++;
+        if (!isNaN(R)) count++;
+        if (!isNaN(I)) count++;
+
+        if (count !== 2) {
+            resultadoElement.innerHTML = "Por favor, preencha <strong>exatamente dois</strong> dos três campos para realizar o cálculo.";
+            return;
+        }
+
+        // Determinar qual valor calcular
+        if (isNaN(V)) {
+            // Calcular V (Tensão)
+            if (R <= 0 || I <= 0) {
+                resultadoElement.innerHTML = "Resistência e Corrente devem ser valores positivos.";
+                return;
+            }
+            V = R * I;
+            resultadoElement.innerHTML = `<span style="color:#0056b3;">Calculado V:</span> <strong>${V.toFixed(2)} Volts (V)</strong>.<br>Usando a fórmula: V = R · I`;
+        } else if (isNaN(R)) {
+            // Calcular R (Resistência)
+            if (I === 0) {
+                resultadoElement.innerHTML = "Corrente (I) não pode ser zero para calcular a Resistência (R).";
+                return;
+            }
+            R = V / I;
+            resultadoElement.innerHTML = `<span style="color:#0056b3;">Calculado R:</span> <strong>${R.toFixed(2)} Ohms (Ω)</strong>.<br>Usando a fórmula: R = V / I`;
+        } else if (isNaN(I)) {
+            // Calcular I (Corrente)
+            if (R === 0) {
+                resultadoElement.innerHTML = "Resistência (R) não pode ser zero. Isso resultaria em um curto-circuito com corrente infinita!";
+                return;
+            }
+            I = V / R;
+            resultadoElement.innerHTML = `<span style="color:#0056b3;">Calculado I:</span> <strong>${I.toFixed(2)} Ampères (A)</strong>.<br>Usando a fórmula: I = V / R`;
+        }
+        
+        resultadoElement.className = 'result success'; // Estilo de sucesso
+        resultadoElement.style.backgroundColor = '#d4edda';
+        resultadoElement.style.color = '#155724';
+        resultadoElement.style.borderColor = '#c3e6cb';
+    }
+
+    function limparCampos() {
+        document.getElementById('inputV').value = '';
+        document.getElementById('inputR').value = '';
+        document.getElementById('inputI').value = '';
+        document.getElementById('resultadoOhm').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
