@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções do BIOS e CMOS</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        header {
+            background-image: url('../img/reader.png');
+            background-size: cover;
+            /* cobre toda a tela */
+            background-repeat: no-repeat;
+            /* não repete a imagem */
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 25px 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        h2 {
+            color: #1a73e8;
+            border-left: 5px solid #1a73e8;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        p {
+            color: #444;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        ul {
+            margin-left: 25px;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .highlight {
+            background: #e8f1ff;
+            border-left: 5px solid #1a73e8;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .image-box {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .image-box img {
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 15px;
+            }
+
+            .image-box img {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Curso de Manutenção de Micros</h1>
+        <p style="color: white;">Funções do BIOS e CMOS – Aula de Hardware</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>O que é o BIOS?</h2>
+            <p>
+                O <strong>BIOS</strong> (Basic Input/Output System) é o sistema básico de entrada e saída do computador.
+                Ele é o primeiro software a ser executado quando o PC é ligado.
+                Sua função principal é inicializar e testar o hardware antes de carregar o sistema operacional.
+            </p>
+
+            <div class="image-box">
+                <img src="img/BIOS.jpg" alt="Tela de configuração do BIOS">
+            </div>
+
+            <p>
+                O BIOS é armazenado em um chip de memória ROM ou flash na placa-mãe, e contém rotinas que permitem ao
+                sistema operacional se comunicar com os dispositivos básicos, como teclado, vídeo e discos.
+            </p>
+        </section>
+
+        <section>
+            <h2>Funções Principais do BIOS</h2>
+            <ul>
+                <li><strong>POST (Power-On Self Test):</strong> Testa memória, processador e dispositivos ao ligar o
+                    computador.</li>
+                <li><strong>Identificação de Hardware:</strong> Detecta o tipo de CPU, quantidade de memória e
+                    dispositivos conectados.</li>
+                <li><strong>Configuração do Sistema:</strong> Permite ajustar data, hora, ordem de boot e tensões de
+                    energia.</li>
+                <li><strong>Carregamento do Sistema Operacional:</strong> Encontra e inicia o SO armazenado no HD ou
+                    SSD.</li>
+                <li><strong>Comunicação com periféricos:</strong> Garante a troca básica de dados entre hardware e
+                    software.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>O que é o CMOS?</h2>
+            <p>
+                O <strong>CMOS</strong> (Complementary Metal-Oxide Semiconductor) é um tipo de memória volátil que
+                armazena as configurações feitas no BIOS, como data, hora, ordem de boot e parâmetros de hardware.
+            </p>
+
+            <div class="image-box">
+                <img src="img/BATERIA.jpg" alt="Bateria CMOS da placa-mãe">
+            </div>
+
+            <p>
+                Essa memória é alimentada por uma <strong>bateria de lítio</strong> na placa-mãe, garantindo que as
+                configurações não sejam perdidas quando o computador é desligado.
+            </p>
+        </section>
+
+        <section>
+            <h2>Diferenças entre BIOS e CMOS</h2>
+            <ul>
+                <li>O <strong>BIOS</strong> é o programa que inicializa o hardware e carrega o sistema operacional.</li>
+                <li>O <strong>CMOS</strong> é o chip de memória que guarda as configurações feitas no BIOS.</li>
+                <li>Sem o CMOS, o BIOS ainda funciona, mas perde as configurações personalizadas ao desligar o PC.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Problemas Comuns</h2>
+            <ul>
+                <li><strong>Perda de data e hora:</strong> indica bateria CMOS fraca.</li>
+                <li><strong>Erro “CMOS checksum bad”:</strong> BIOS corrompido ou configuração inválida.</li>
+                <li><strong>Não inicializa após atualização:</strong> erro de gravação na memória flash do BIOS.</li>
+            </ul>
+
+            <div class="highlight">
+                💡 <strong>Dica:</strong> Ao substituir a bateria, desligue a fonte ATX e aguarde alguns segundos para
+                evitar curto.
+            </div>
+        </section>
+
+        <section>
+            <h2>Curiosidades</h2>
+            <ul>
+                <li>As versões modernas do BIOS são chamadas de <strong>UEFI</strong>, com interface gráfica e suporte a
+                    mouse.</li>
+                <li>O BIOS tradicional opera em 16 bits, enquanto o UEFI suporta 32/64 bits.</li>
+                <li>Algumas placas permitem salvar perfis de configuração dentro do BIOS.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        Curso de Manutenção de Micros • Aula – BIOS e CMOS • JG
+    </footer>
+</body>
+
+</html>

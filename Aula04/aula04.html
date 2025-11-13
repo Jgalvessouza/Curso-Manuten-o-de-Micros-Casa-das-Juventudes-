@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aula 4 – Placa-Mãe: Estrutura e Comunicação</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1>Curso de Manutenção de Micros – Casa das Juventudes</h1>
+      <p class="subtitle">Aula 4 – Placa-Mãe: Estrutura, Slots e Comunicação</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="carousel">
+      <button class="nav prev" aria-label="Slide anterior">&#10094;</button>
+      <div class="slides" id="slides">
+
+        <!-- SLIDE 1 -->
+        <article class="slide" data-index="0" aria-hidden="false">
+          <img src="img/placa01.png" alt="Placa-mãe vista superior" style="width:380px;">
+          <h2>O que é a Placa-Mãe?</h2>
+          <p>
+            A <strong>placa-mãe</strong> é o principal circuito do computador. Ela interliga todos os componentes — processador, memória, HD, periféricos — permitindo que troquem informações entre si.  
+            É nela que estão os barramentos, slots e circuitos de controle do sistema.
+          </p>
+        </article>
+
+        <!-- SLIDE 2 -->
+        <article class="slide" data-index="1" aria-hidden="true">
+          <img src="img/soqutes.png" alt="Slots de memória e PCI" style="width:380px;">
+          <h2>Principais Partes da Placa-Mãe</h2>
+          <ul>
+            <li><strong>Socket do processador:</strong> Onde o CPU é instalado.</li>
+            <li><strong>Slots de memória:</strong> Local onde as memórias RAM são encaixadas.</li>
+            <li><strong>Slots PCI/PCIe:</strong> Expansão de vídeo, rede, som etc.</li>
+            <li><strong>Chipset:</strong> Controla a comunicação entre CPU, RAM e dispositivos.</li>
+            <li><strong>Conectores SATA:</strong> Conectam HDs e SSDs.</li>
+          </ul>
+        </article>
+
+        <!-- SLIDE 3 -->
+        <article class="slide" data-index="2" aria-hidden="true">
+          <img src="img/chipset.jpg" alt="Chipset da placa-mãe" style="width:380px;">
+          <h2>Chipset: O Sistema nervoso da Placa-Mãe</h2>
+          <p>
+            O <strong>chipset</strong> é responsável por coordenar a comunicação entre o processador, as memórias e os periféricos.  
+            Ele é dividido em duas partes:
+          </p>
+          <ul>
+            <li><strong>Ponte Norte:</strong> Conecta CPU, memória e placa de vídeo.</li>
+            <li><strong>Ponte Sul:</strong> Controla HDs, USB, áudio e rede.</li>
+          </ul>
+        </article>
+
+        <!-- SLIDE 4 -->
+        <article class="slide" data-index="3" aria-hidden="true">
+          <img src="img/bios .png" alt="Chip BIOS" style="width:380px;">
+          <h2>BIOS e CMOS</h2>
+          <p>
+            O chip <strong>BIOS</strong> contém o programa que inicializa o computador (POST e configurações).  
+            A memória <strong>CMOS</strong> guarda as configurações da BIOS e é alimentada por uma pequena bateria de 3V.
+          </p>
+          <p>
+            ⚙️ Na manutenção, é comum remover a bateria CMOS para resetar a BIOS e resolver falhas de inicialização.
+          </p>
+        </article>
+
+        <!-- SLIDE 5 -->
+        <article class="slide" data-index="4" aria-hidden="true">
+          <img src="img/Front_Side_Bus.png" alt="Barramentos da placa-mãe" style="width:380px;">
+          <h2>Barramentos e Comunicação</h2>
+          <p>
+            Os <strong>barramentos</strong> são caminhos elétricos que transportam dados, endereços e comandos entre os componentes.  
+            <br>Principais tipos:
+          </p>
+          <ul>
+            <li><strong>Front Side Bus (FSB):</strong> Liga CPU ao chipset.</li>
+            <li><strong>PCI Express:</strong> Comunicação de alta velocidade com periféricos.</li>
+            <li><strong>SATA:</strong> Transferência de dados para HDs e SSDs.</li>
+            <li><strong>USB:</strong> Conexão com dispositivos externos.</li>
+          </ul>
+        </article>
+
+        <!-- SLIDE 6 -->
+        <article class="slide" data-index="5" aria-hidden="true">
+          <img src="img/teste.jpg" alt="Teste e diagnóstico de placa" style="width:380px;">
+          <h2>Diagnóstico e Testes</h2>
+          <ul>
+            <li>Verificar visualmente capacitores estufados.</li>
+            <li>Conferir se há oxidação ou trilhas rompidas.</li>
+            <li>Usar multímetro para testar tensões nos conectores de energia e slots.</li>
+            <li>Limpar a placa com álcool isopropílico se houver sujeira ou oxidação leve.</li>
+          </ul>
+        </article>
+
+        <!-- SLIDE 7 -->
+        <article class="slide" data-index="6" aria-hidden="true">
+          <img src="img/teste_de_placa.png" alt="Prática de identificação de componentes" style="width:380px;">
+          <h2>Prática: Identificação na Bancada</h2>
+          <p>
+            Distribua placas sucata para os grupos e peça que identifiquem:
+          </p>
+          <ul>
+            <li>Bobina da fonte do entre 1V a 1.5V Socket do processador;</li>
+            <li>Slots de memória RAM 1.2v a 2.5V  e PCI;</li>
+            <li>Chip BIOS e bateria CMOS; 3V</li>
+            <li>Chipset 1.5v e conectores SATA. 3v</li>
+          </ul>
+          <p>📸 Os grupos podem fotografar suas placas e anotar os códigos impressos para pesquisa posterior.</p>
+        </article>
+
+        <!-- SLIDE 8 -->
+        <article class="slide" data-index="7" aria-hidden="true">
+          <img src="img/conclusão.png" alt="Conclusão da aula de placa-mãe" style="width:380px;">
+          <h2>Conclusão</h2>
+          <p>
+            Nesta aula, os alunos compreenderam a função da placa-mãe como o centro de comunicação do computador.
+            Identificaram seus componentes e aprenderam a realizar inspeções visuais e medições básicas.
+          </p>
+        </article>
+
+      </div>
+      <button class="nav next" aria-label="Próximo slide">&#10095;</button>
+      <div class="dots" id="dots"></div>
+    </section>
+
+    <section class="notes card">
+      <h3>Material Complementar</h3>
+      <ul>
+        <li><a href="https://youtu.be/t41CAghaIl8?si=3bRz_lJi9L6so4he" target = "_blank" >Placa Mãe e seus componentes (vídeo explicativo)</a></li>
+        <li><a href="https://youtu.be/jhdp_bTY3RE?si=hd1Jx9EsbxtAexQW" target="_blank">Chipset - O que é? (Em informática)</a></li>
+        <li><a href="bios.html" target="_blank">Funções do BIOS e CMOS</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="topbar">
+    <div class="container">
+      <small>Material didático – Curso de Manutenção de Micros • Aula 4 – Placa-Mãe • JG</small>
+    </div>
+  </footer>
+
+  <script src="../scripts/script.js"></script>
+</body>
+</html>
