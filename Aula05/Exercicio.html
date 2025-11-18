@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício: Cooler e Pasta Térmica</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        header {
+            background-image: url('../img/reader.png'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 25px 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        .question-box {
+            background: #e8f1ff; /* Fundo azul claro do highlight */
+            border-left: 5px solid #1a73e8; /* Borda azul do título do BIOS */
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+        }
+
+        .question-box h3 {
+            color: #1a73e8;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* Estilo das opções de rádio */
+        .option-label {
+            display: block;
+            background: #fff;
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .option-label:hover {
+            background-color: #f0f0f0;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+            accent-color: #1a73e8; /* Cor do rádio button */
+        }
+
+        /* Estilo do botão de submissão */
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 30px;
+            background-color: #28a745; /* Cor verde para ação */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #1e7e34;
+        }
+
+        /* Estilo para a área de resultados */
+        #results {
+            margin-top: 30px;
+            padding: 20px;
+            border: 2px solid #1a73e8;
+            border-radius: 8px;
+            display: none; /* Escondido por padrão */
+            text-align: center;
+        }
+
+        .correct {
+            background-color: #d4edda;
+            border-color: #28a745;
+        }
+
+        .incorrect {
+            background-color: #f8d7da;
+            border-color: #dc3545;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🛠️ Teste de Conhecimento</h1>
+        <p>Aula: Dissipação de Calor - Cooler e Pasta Térmica</p>
+    </header>
+
+    <main>
+        <form id="quiz-form">
+            
+            <div class="question-box">
+                <h3>1. Qual a função principal da pasta térmica entre o processador e o dissipador?</h3>
+                <label class="option-label">
+                    <input type="radio" name="q1" value="a"> A. Criar isolamento elétrico.
+                </label>
+                <label class="option-label">
+                    <input type="radio" name="q1" value="b"> B. Colar permanentemente o cooler ao processador.
+                </label>
+                <label class="option-label">
+                    <input type="radio" name="q1" value="c"> C. Preencher microimperfeições para melhorar a condução de calor.
+                </label>
+                <label class="option-label">
+                    <input type="radio" name="q1" value="d"> D. Evitar que o processador vibre no socket.
+                </label>
+            </div>
+
+            <div class="question-box">
+                <h3>2. Qual é a recomendação de aplicação de pasta térmica para garantir a melhor condução?</h3>
+                <label class="option-label">
+                    <input type="radio" name="q2" value="a"> A. Espalhar uma camada grossa cobrindo toda a superfície.
+                </label>
+                <label class="option-label">
+                    <input type="radio" name="q2" value="b"> B. Usar apenas nas bordas do processador.
+                </label>
+                <label class="option-label">
+                    <input type="radio" name="q2" value="c"> C. Aplicar uma pequena quantidade (grão de arroz/ervilha) no centro.
+                </label>
+                <label class="option-label">
+                    <input type="radio" name="q2" value="d"> D. Não usar pasta térmica; a pressão já é suficiente.
+                </label>
+            </div>
+
+            <div class="question-box">
+                <h3>3. Ao instalar um cooler com parafusos, por que é recomendado apertá-los em um "padrão X" (diagonal)?</h3>
+                <label class="option-label">
+                    <input type="radio" name="q3" value="a"> A. Para que o cabo do ventilador fique mais acessível.
+                </label>
+                <label class="option-label">
+                    <input type="radio" name="q3" value="b"> B. Para garantir que a pressão sobre a CPU seja uniforme.
+                </label>
+                <label class="option-label">
+                    <input type="radio" name="q3" value="c"> C. É apenas uma preferência estética, sem função técnica.
+                </label>
+                <label class="option-label">
+                    <input type="radio" name="q3" value="d"> D. Para economizar parafusos.
+                </label>
+            </div>
+
+            <button type="submit">Verificar Respostas</button>
+        </form>
+
+        <div id="results">
+            <h2>Resultado:</h2>
+            <p id="score-text"></p>
+        </div>
+    </main>
+
+    <footer>
+        Material didático – Curso de Manutenção de Micros • Exercício Prático • JG
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('quiz-form');
+            const resultsDiv = document.getElementById('results');
+            const scoreText = document.getElementById('score-text');
+
+            // Respostas corretas
+            const correctAnswers = {
+                q1: 'c', // Preencher microimperfeições para melhorar a condução de calor.
+                q2: 'c', // Aplicar uma pequena quantidade (grão de arroz/ervilha) no centro.
+                q3: 'b'  // Para garantir que a pressão sobre a CPU seja uniforme.
+            };
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Impede o envio padrão do formulário
+
+                let score = 0;
+                const totalQuestions = Object.keys(correctAnswers).length;
+                const formData = new FormData(form);
+
+                // Itera sobre as respostas do usuário
+                for (const [question, userAnswer] of formData.entries()) {
+                    const correctAnswer = correctAnswers[question];
+                    
+                    // Verifica se a resposta do usuário está correta
+                    if (userAnswer === correctAnswer) {
+                        score++;
+                    }
+                }
+
+                // Exibe o resultado
+                scoreText.innerHTML = `Você acertou **${score}** de **${totalQuestions}** perguntas.`;
+
+                // Aplica a classe de cor com base na pontuação
+                if (score === totalQuestions) {
+                    resultsDiv.className = 'correct';
+                    scoreText.innerHTML += '<br>🥳 **Parabéns!** Você demonstrou total domínio no assunto.';
+                } else if (score >= totalQuestions / 2) {
+                    resultsDiv.className = '';
+                    scoreText.innerHTML += '<br>👍 Bom trabalho! Reveja apenas os pontos de atenção.';
+                } else {
+                    resultsDiv.className = 'incorrect';
+                    scoreText.innerHTML += '<br>⚠️ É importante revisar o material sobre aplicação e fixação do cooler.';
+                }
+
+                // Torna a div de resultados visível
+                resultsDiv.style.display = 'block';
+                
+                // Rola a tela para o resultado
+                resultsDiv.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

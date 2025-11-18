@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aula 5 – O Processador (CPU)</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1>Curso de Manutenção de Micros – Casa das Juventudes</h1>
+      <p class="subtitle">Aula 5 – O Processador: Função, Estrutura e Cuidados</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="carousel">
+      <button class="nav prev" aria-label="Slide anterior">&#10094;</button>
+      <div class="slides" id="slides">
+
+        <!-- SLIDE 1 -->
+        <article class="slide" data-index="0" aria-hidden="false">
+          <img src="img/process.png" alt="Processador visto de cima" style="width:380px;">
+          <h2>O que é o Processador?</h2>
+          <p>
+            O <strong>processador (CPU)</strong> é o cérebro do computador. Ele executa cálculos e instruções que fazem o sistema funcionar.  
+            Sua função é receber, processar e enviar informações, coordenando o funcionamento de todos os outros componentes.
+          </p>
+        </article>
+
+        <!-- SLIDE 2 -->
+        <article class="slide" data-index="1" aria-hidden="true">
+          <img src="img/clock.png" alt="Clock e frequência da CPU" style="width:380px;">
+          <h2>Clock e Frequência</h2>
+          <p>
+            O <strong>clock</strong> define quantos ciclos o processador realiza por segundo, medido em <strong>Hertz (Hz)</strong>.  
+            Exemplo: um processador de 3.0 GHz executa 3 bilhões de operações por segundo.  
+            A frequência e o número de núcleos determinam o desempenho total do sistema.
+          </p>
+        </article>
+
+        <!-- SLIDE 3 -->
+        <article class="slide" data-index="2" aria-hidden="true">
+          <img src="img/Núcleos_Threads.png" alt="Núcleos do processador" style="width:380px;">
+          <h2>Núcleos e Threads</h2>
+          <p>
+            Processadores modernos possuem múltiplos <strong>núcleos</strong> (cores), que permitem realizar várias tarefas simultaneamente.  
+            Cada núcleo pode executar uma thread, e tecnologias como <strong>Hyper-Threading (Intel)</strong> e <strong>SMT (AMD)</strong> aumentam essa capacidade, duplicando o número de tarefas processadas.
+          </p>
+        </article>
+
+        <!-- SLIDE 4 -->
+        <article class="slide" data-index="3" aria-hidden="true">
+          <img src="img/soket.png" alt="Socket do processador" style="width:380px;">
+          <h2>Socket e Instalação</h2>
+          <p>
+            O <strong>socket</strong> é o encaixe onde o processador é instalado na placa-mãe.  
+            Cada modelo de CPU possui um tipo de socket específico (ex: LGA1200, AM4).  
+            É importante alinhar o triângulo da CPU com a marca no socket e evitar pressionar os pinos.
+          </p>
+        </article>
+
+        <!-- SLIDE 5 -->
+        <article class="slide" data-index="4" aria-hidden="true">
+          <img src="img/cooler.png" alt="Cooler e dissipador de calor" style="width:380px;">
+          <h2>Dissipação de Calor e Cooler</h2>
+          <p>
+            O processador gera calor ao trabalhar, e por isso precisa de um <strong>dissipador</strong> e um <strong>cooler</strong> para manter a temperatura ideal.  
+            A <strong>pasta térmica</strong> deve ser aplicada entre o processador e o dissipador para melhorar a condução do calor.
+          </p>
+        </article>
+
+        <!-- SLIDE 6 -->
+        <article class="slide" data-index="5" aria-hidden="true">
+          <img src="img/pinos.png" alt="Pinos e contatos do processador" style="width:380px;">
+          <h2>Cuidados com a CPU</h2>
+          <ul>
+            <li>Evite tocar nos pinos dourados ou contatos metálicos.</li>
+            <li>Não instale o processador com o PC energizado.</li>
+            <li>Use pulseira antiestática ou descarregue a estática antes de manusear.</li>
+            <li>Não use excesso de pasta térmica — pode causar curto.</li>
+          </ul>
+        </article>
+
+        <!-- SLIDE 7 -->
+        <article class="slide" data-index="6" aria-hidden="true">
+          <img src="img/teste.png" alt="Teste de CPU" style="width:380px;">
+          <h2>Teste e Diagnóstico</h2>
+          <p>
+            Para verificar o funcionamento da CPU, é possível usar softwares como:
+          </p>
+          <ul>
+            <li><strong>CPU-Z:</strong> mostra frequência, cache e arquitetura.</li>
+            <li><strong>HWMonitor:</strong> monitora temperatura e voltagem.</li>
+            <li><strong>Stress Test:</strong> testa estabilidade do sistema.</li>
+          </ul>
+          <p>⚙️ Se o computador não dá vídeo, verifique a presença das tensões Vcore e o encaixe da CPU no socket.</p>
+        </article>
+
+        <!-- SLIDE 8 -->
+        <article class="slide" data-index="7" aria-hidden="true">
+          <img src="img/comclu.png" alt="Conclusão da aula sobre processador" style="width:380px;">
+          <h2>Conclusão</h2>
+          <p>
+            O processador é o coração do computador.  
+            Compreender seu funcionamento, instalação e manutenção é fundamental para diagnosticar e corrigir falhas de desempenho ou inicialização.  
+            Na próxima aula, estudaremos as <strong>memórias RAM e ROM</strong> em detalhes.
+          </p>
+        </article>
+
+      </div>
+      <button class="nav next" aria-label="Próximo slide">&#10095;</button>
+      <div class="dots" id="dots"></div>
+    </section>
+
+    <section class="notes card">
+      <h3>Material Complementar</h3>
+      <ul>
+        <li><a href="https://youtu.be/GRuTNQlLxrU?si=Uf-IFK7ohlY9nQk1" target="_blank">O que é um processador e qual a sua função? </a></li>
+        <li><a href="pratica_disip.html">Instalação correta do cooler e pasta térmica <br> </a></li>
+        <li><a href="Exercicio.html">Exercicio <br> </a></li>
+        
+      </ul>
+      <br>
+      <h3>Downloads de teste e diagnóstico para processadores</h3>
+      <ul>
+        <li><a href="https://www.softonic.com.br/download/cpu-z/windows/post-download?dt=internalDownload&installerType=riseInstaller" target="_blank">CPUZ</a></li>
+        <li><a href="https://download.cpuid.com/hwmonitor-pro/hwmonitor-pro_1.56.exe">HWMonitor PRO</a></li>
+        <li><a href="https://download.sysinternals.com/files/CPUSTRES.zip">Stress Test</a></li>
+
+      </ul>
+    </section>
+  </main>
+
+  <footer class="topbar">
+    <div class="container">
+      <small>Material didático – Curso de Manutenção de Micros • Aula 5 – O Processador • JG</small>
+    </div>
+  </footer>
+
+  <script src="../scripts/script.js"></script>
+</body>
+</html>
