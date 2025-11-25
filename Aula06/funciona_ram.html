@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Como funciona a memória RAM</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --bg: #f6f8fb;
+            --card: #ffffff;
+            --accent: #1a73e8;
+            --muted: #5b6b7a;
+            --radius: 12px;
+            --shadow: 0 8px 24px rgba(8, 18, 51, 0.06);
+            --text: #111827;
+            --container: 1100px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Roboto, Inter, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.5;
+        }
+
+        .topbar {
+            background-image: url('../img/reader.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #fff;
+            padding: 18px 0;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(19, 103, 201, 0.12);
+        }
+
+        .container {
+            max-width: var(--container);
+            margin: 20px auto;
+            padding: 18px
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 18px;
+            box-shadow: var(--shadow);
+            margin-bottom: 18px
+        }
+
+        h1 {
+            margin: 0 0 6px
+        }
+
+        h2 {
+            color: var(--accent);
+            margin-top: 0
+        }
+
+        p {
+            color: var(--muted);
+            margin: 8px 0
+        }
+
+        ul,
+        ol {
+            margin-left: 18px
+        }
+
+        .highlight {
+            background: #e9f7ff;
+            border-left: 4px solid var(--accent);
+            padding: 10px;
+            border-radius: 8px;
+            margin: 12px 0
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px
+        }
+
+        th,
+        td {
+            padding: 8px;
+            border: 1px solid #e6f1fb;
+            text-align: left
+        }
+
+        th {
+            background: #f2f8ff;
+            color: var(--accent)
+        }
+
+        .notes {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px
+        }
+
+        @media(min-width:920px) {
+            .notes {
+                grid-template-columns: 2fr 1fr
+            }
+        }
+
+        .widget {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 8px
+        }
+
+        input[type="number"] {
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid #e0e7ff;
+            width: 140px
+        }
+
+        button {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer
+        }
+
+        .small {
+            font-size: 0.92rem;
+            color: #6b7280
+        }
+
+        .safety {
+            background: #fff6f6;
+            border-left: 4px solid #ff4d4f;
+            padding: 10px;
+            border-radius: 8px;
+            color: #6b2b2b
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            padding: 16px;
+            margin-top: 12px
+        }
+
+        .code {
+            background: #0b1220;
+            color: #e6f0ff;
+            padding: 12px;
+            border-radius: 8px;
+            overflow: auto;
+            font-family: monospace;
+            font-size: 13px
+        }
+
+        .grid {
+            display: grid;
+            gap: 12px
+        }
+
+        @media(min-width:720px) {
+            .grid {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="container">
+            <h1>Como funciona a memória RAM</h1>
+            <p class="small">Aula – Memórias (detalhes práticos sobre RAM, tipos, canais e testes)</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="card">
+            <h2>Visão Geral</h2>
+            <p>A <strong>RAM (Random Access Memory)</strong> é a memória de trabalho do computador. Diferente do
+                armazenamento (HD/SSD), a RAM é <strong>volátil</strong> — perde o conteúdo quando a máquina é desligada
+                — e oferece acesso muito mais rápido aos dados que o processador precisa no momento.</p>
+
+            <div class="highlight">
+                🔎 <strong>Resumo:</strong> A RAM acelera o sistema guardando dados e instruções temporárias. Mais RAM
+                ou RAM mais rápida geralmente melhora o desempenho, especialmente em multitarefa e aplicações pesadas.
+            </div>
+
+            <h2>Como a RAM funciona (resumido)</h2>
+            <ol>
+                <li>O processador solicita dados ou instruções.</li>
+                <li>Se estiverem na RAM, o acesso é muito rápido (nanosegundos).</li>
+                <li>Se não estiverem, o sistema busca no armazenamento (SSD/HD) — muito mais lento.</li>
+                <li>Dados usados com frequência ficam em cache (L1/L2/L3) e na RAM para acelerar o processamento.</li>
+            </ol>
+
+            <h2>Componentes e organização</h2>
+            <div class="grid">
+                <div>
+                    <h3>Módulos DIMM / SO-DIMM</h3>
+                    <p>Módulos de memória para desktop (DIMM) e notebooks (SO-DIMM). Cada módulo tem chips de memória em
+                        ambas as faces e contatos dourados que se encaixam no slot da placa-mãe.</p>
+                </div>
+                <div>
+                    <h3>Controlador de memória</h3>
+                    <p>Pode estar integrado ao chipset ou dentro do próprio processador (nos processadores modernos).
+                        Responsável por ler/escrever nos módulos e gerenciar canais (single/dual/quad channel).</p>
+                </div>
+            </div>
+
+            <h2>Tipos e gerações (diferenças práticas)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Frequência típica</th>
+                        <th>Característica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DDR3</td>
+                        <td>800–2133 MHz</td>
+                        <td>Antiga, ainda encontrada em máquinas legadas</td>
+                    </tr>
+                    <tr>
+                        <td>DDR4</td>
+                        <td>1600–3200+ MHz</td>
+                        <td>Amplamente usada em desktops e notebooks modernos</td>
+                    </tr>
+                    <tr>
+                        <td>DDR5</td>
+                        <td>4800+ MHz</td>
+                        <td>Maior largura de banda, eficiência e capacidade por módulo</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Single, Dual e Quad Channel</h2>
+            <p>O modo <strong>dual channel</strong> permite que o controlador acesse dois módulos simultaneamente,
+                dobrando a largura de banda efetiva. Para ativar dual channel, instale módulos idênticos nos slots
+                indicados (normalmente pares e de mesma cor).</p>
+
+            <h2>Latência e frequência — o que importa?</h2>
+            <p>Frequência (MHz) indica quantos ciclos por segundo a RAM executa. Latência (CL - CAS Latency) indica
+                quantos ciclos a RAM demora para responder. Em geral, alta frequência e baixa latência resultam em
+                melhor performance, mas o impacto real depende do tipo de aplicação.</p>
+
+            <div class="grid">
+                <div class="card small">
+                    <h3>Exemplo</h3>
+                    <p>Ram 3200 MHz CL16: roda a 3.200 milhões de ciclos por segundo; cada acesso demora ~16 ciclos.</p>
+                </div>
+                <div class="card small">
+                    <h3>Dica prática</h3>
+                    <p>Ao montar, prefira módulos idênticos (mesma marca/modelo/frequência) para evitar
+                        incompatibilidades e permitir dual channel.</p>
+                </div>
+            </div>
+
+        </article>
+
+        <aside class="card notes">
+            <div>
+                <h2>Teste e Diagnóstico</h2>
+                <ul>
+                    <li><strong>MemTest86:</strong> bootável para verificar erros de memória.</li>
+                    <li><strong>Troca de slots:</strong> testar módulos em outros slots para localizar slot defeituoso.
+                    </li>
+                    <li><strong>Limpeza de contatos:</strong> limpar com borracha branca ou álcool isopropílico.</li>
+                    <li><strong>Erro de POST:</strong> bipes ao ligar podem indicar problema de memória — consulte o
+                        manual do fabricante para códigos.</li>
+                </ul>
+
+                <div class="highlight">
+                    ⚠️ Sempre desligue e desconecte a fonte antes de mexer em módulos. Use pulseira antiestática quando
+                    possível.
+                </div>
+            </div>
+
+            <div>
+                <h2>Prática sugerida</h2>
+                <ol>
+                    <li>Identifique módulos DIMM e SO-DIMM em sucata.</li>
+                    <li>Remova e reinstale módulos, testando inicialização a cada mudança.</li>
+                    <li>Execute MemTest86 por pelo menos 1 passagem (pass) para detectar erros.</li>
+                    <li>Compare desempenho (benchmark simples) antes e depois da troca para perceber diferença.</li>
+                </ol>
+            </div>
+
+            <div>
+                <h2>Recursos</h2>
+                <ul class="small">
+                    <li><a href="https://www.memtest86.com/" target="_blank">MemTest86 – site oficial</a></li>
+                    <li><a href="https://www.cpuid.com/softwares/cpu-z.html" target="_blank">CPU-Z – ver tipo e
+                            frequência</a></li>
+                    <li><a href="https://www.youtube.com/results?search_query=memtest86+tutorial"
+                            target="_blank">Tutoriais MemTest86 (YouTube)</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <article class="card">
+            <h2>Medindo e convertendo frequências (pequena ferramenta)</h2>
+            <p>Use o conversor abaixo para ver quantos ciclos por segundo representam os MHz informados (útil para
+                explicar a escala):</p>
+
+            <div class="widget">
+                <label for="mhz" class="small">Frequência (MHz)</label>
+                <input id="mhz" type="number" min="1" value="3200" />
+                <button id="calc">Converter</button>
+                <div id="out" class="small" style="margin-left:8px"></div>
+            </div>
+
+            <div style="margin-top:12px">
+                <h3>Teste Interativo — Identificando Dual Channel</h3>
+                <p class="small">Clique <strong>Iniciar Teste</strong>, insira quantos módulos idênticos (pares) você
+                    tem e a página indicará se o dual channel pode ser ativado (simples verificação educativa).</p>
+                <div class="widget" style="margin-top:8px">
+                    <label for="modules" class="small">Módulos idênticos</label>
+                    <input id="modules" type="number" min="1" value="2" />
+                    <button id="startTest">Iniciar Teste</button>
+                    <div id="result" class="small" style="margin-left:8px"></div>
+                </div>
+            </div>
+
+            <div class="highlight" style="margin-top:14px">
+                ✅ <strong>Atividade para sala:</strong> traga 2 módulos iguais e mostre à turma como ativar dual channel
+                no BIOS (ou com as cores dos slots).
+            </div>
+        </article>
+
+        <article class="card">
+            <h2>Perguntas Frequentes</h2>
+            <ul>
+                <li><strong>Posso misturar marcas diferentes?</strong> — Sim, mas pode reduzir compatibilidade e
+                    performance. Melhor usar módulos iguais.</li>
+                <li><strong>Como identificar DDR4 vs DDR3?</strong> — Observe o entalhe do módulo: cada DDR tem posição
+                    diferente do notch.</li>
+                <li><strong>Memória com erro: descartar ou reparar?</strong> — Normalmente descarta-se; problemas
+                    físicos em chips não são reparáveis na prática de bancada.</li>
+            </ul>
+        </article>
+
+    </main>
+
+    <footer>
+        Curso de Manutenção de Micros • Como funciona a memória RAM • JG
+    </footer>
+
+    <script>
+        // Conversor MHz -> ciclos por segundo
+        function mhzToCycles(mhz) {
+            // 1 MHz = 1.000.000 ciclos por segundo
+            return mhz * 1_000_000;
+        }
+
+        document.getElementById('calc').addEventListener('click', () => {
+            const mhz = Number(document.getElementById('mhz').value || 0);
+            if (!mhz || mhz <= 0) { document.getElementById('out').textContent = 'Insira um valor válido.'; return; }
+            const cycles = mhzToCycles(mhz);
+            document.getElementById('out').textContent = `${cycles.toLocaleString('pt-BR')} ciclos/s`;
+        });
+
+        // Simples verificador de dual channel (educativo)
+        document.getElementById('startTest').addEventListener('click', () => {
+            const modules = Number(document.getElementById('modules').value || 0);
+            const res = document.getElementById('result');
+            if (modules < 1) { res.textContent = 'Insira 1 ou mais módulos.'; return; }
+            if (modules % 2 === 0) {
+                res.textContent = `OK — com ${modules} módulo(s) idêntico(s) você pode configurar Dual Channel (use pares nos slots corretos).`;
+            } else {
+                res.textContent = `Aviso — com ${modules} módulo(s) não será possível formar apenas pares; adicione mais um módulo idêntico para Dual Channel.`;
+            }
+        });
+
+        // Evento para boas práticas (conselho rápido no console)
+        console.log('Página de Memória RAM carregada — lembre-se de usar pulseira antiestática ao manusear módulos.');
+    </script>
+</body>
+
+</html>

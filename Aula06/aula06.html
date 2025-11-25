@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aula 6 – Memórias RAM, ROM e Cache</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1>Curso de Manutenção de Micros – Casa das Juventudes</h1>
+      <p class="subtitle">Aula 6 – Memórias: Tipos, Função e Testes</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="carousel">
+      <button class="nav prev" aria-label="Slide anterior">&#10094;</button>
+      <div class="slides" id="slides">
+
+        <!-- SLIDE 1 -->
+        <article class="slide" data-index="0" aria-hidden="false">
+          <img src="img/Memoria_ram.png" alt="Módulos de memória RAM" style="width:380px;">
+          <h2>Memória RAM.</h2>
+          <p>
+            A <strong>RAM (Memória de Acesso Aleatório)</strong> armazena dados temporariamente enquanto o computador está ligado.  
+            Ela permite o acesso rápido às informações que o processador precisa, influenciando diretamente no desempenho do sistema.
+          </p>
+        </article>
+
+        <!-- SLIDE 2 -->
+        <article class="slide" data-index="1" aria-hidden="true">
+          <img src="img/Mmoria.png" alt="Evolução das memórias DDR" style="width:380px;">
+          <h2>Tipos de Memória DDR</h2>
+          <p>
+            As memórias evoluíram com o tempo, aumentando a velocidade e reduzindo o consumo de energia:
+          </p>
+          <ul>
+            <li><strong>DDR1:</strong> até 400 MHz <strong>DDR2:</strong> até 800 MHz</li>
+            <li><strong>DDR3:</strong> até 1600 MHz <strong>DDR4:</strong> até 3200 MHz</li>
+            <li><strong>DDR5:</strong> acima de 4800 MHz</li>
+          </ul>
+          <p>💡 Cada tipo tem um encaixe diferente para evitar instalação incorreta.</p>
+        </article>
+
+        <!-- SLIDE 3 -->
+        <article class="slide" data-index="2" aria-hidden="true">
+          <img src="img/dUAL.png" alt="Dual Channel de memórias" style="width:380px;">
+          <h2>Single e Dual Channel</h2>
+          <p>
+            <strong>Single Channel</strong> usa um módulo de memória.  
+            <strong>Dual Channel</strong> utiliza dois módulos idênticos, dobrando a largura de banda e melhorando o desempenho geral do sistema.
+          </p>
+          <p>Para ativar, instale os módulos nos slots da mesma cor na placa-mãe.</p>
+        </article>
+
+        <!-- SLIDE 4 -->
+        <article class="slide" data-index="3" aria-hidden="true">
+          <img src="img/cache.png" alt="Memória Cache" style="width:380px;">
+          <h2>Memória Cache</h2>
+          <p>
+            A <strong>memória cache</strong> é uma memória ultrarrápida presente dentro do processador.  
+            Ela guarda dados que o CPU acessa com frequência, reduzindo o tempo de espera.  
+            Existem três níveis principais:
+          </p>
+          <ul>
+            <li><strong>L1:</strong> mais rápida, porém menor.</li>
+            <li><strong>L2:</strong> intermediária entre tamanho e velocidade.</li>
+            <li><strong>L3:</strong> maior e compartilhada entre núcleos.</li>
+          </ul>
+        </article>
+
+        <!-- SLIDE 5 -->
+        <article class="slide" data-index="4" aria-hidden="true">
+          <img src="img/Memoria_Rom.png" alt="Chip de memória ROM" style="width:380px;">
+          <h2>Memória ROM</h2>
+          <p>
+            A <strong>ROM (Read-Only Memory)</strong> é usada para armazenar dados permanentes, como o <strong>firmware</strong> do BIOS.  
+            Diferente da RAM, seu conteúdo permanece mesmo com o computador desligado.  
+            Ela é essencial para inicializar o sistema.
+          </p>
+        </article>
+
+        <!-- SLIDE 6 -->
+        <article class="slide" data-index="5" aria-hidden="true">
+          <img src="img/instalacao.png" alt="Instalando memória RAM" style="width:380px;">
+          <h2>Instalação da Memória</h2>
+          <p>
+            Para instalar um módulo RAM:
+          </p>
+          <ul>
+            <li>Desligue o computador e desconecte a energia.</li>
+            <li>Abra as travas do slot de memória.</li>
+            <li>Alinhe o encaixe e pressione até ouvir o “clique”.</li>
+            <li>Evite tocar nos contatos dourados e nos CIs da memória.</li>
+          </ul>
+        </article>
+
+        <!-- SLIDE 7 -->
+        <article class="slide" data-index="6" aria-hidden="true">
+          <img src="img/testes.png" alt="Teste de memória RAM" style="width:380px;">
+          <h2>Teste e Diagnóstico</h2>
+          <p>
+            Se o computador apita ou não liga, o problema pode estar na memória.  
+            Testes recomendados:
+          </p>
+          <ul>
+            <li><strong>MemTest86:</strong> verifica erros na RAM.</li>
+            <li><strong>CPU-Z:</strong> mostra frequência e tipo da memória.</li>
+            <li><strong>Técnica da substituição:</strong> testar outro módulo compatível.</li>
+          </ul>
+          <p>⚙️ Limpe os contatos com borracha branca e reinstale se houver falhas intermitentes.</p>
+        </article>
+
+        <!-- SLIDE 8 -->
+        <article class="slide" data-index="7" aria-hidden="true">
+          <img src="img/concluir.png" alt="Memória RAM e placa-mãe" style="width:380px;">
+          <h2>Conclusão</h2>
+          <p>
+            A memória é fundamental para o desempenho e estabilidade do computador.  
+            Compreender seus tipos e funcionamento ajuda a realizar diagnósticos rápidos e evitar trocas desnecessárias.  
+            Na próxima aula, estudaremos os <strong>dispositivos de armazenamento (HD, SSD e M.2)</strong>.
+          </p>
+        </article>
+
+      </div>
+      <button class="nav next" aria-label="Próximo slide">&#10095;</button>
+      <div class="dots" id="dots"></div>
+    </section>
+
+    <section class="notes card">
+      <h3>Material Complementar</h3>
+      <ul>
+        <li><a href="funciona_ram.html" >Como funciona a memória RAM</a></li>
+        <li><a href="https://youtu.be/6ZotxnvGNTQ?si=xwf7RmyQIEkLQKZT" target="_blank">Diferença entre DDR3, DDR4 e DDR5</a></li>
+        <li><a href="intalar_ram.html" >Como instalar memórias RAM corretamente</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="topbar">
+    <div class="container">
+      <small>Material didático – Curso de Manutenção de Micros • Aula 6 – Memórias • JG</small>
+    </div>
+  </footer>
+
+  <script src="../scripts/script.js"></script>
+</body>
+</html>
