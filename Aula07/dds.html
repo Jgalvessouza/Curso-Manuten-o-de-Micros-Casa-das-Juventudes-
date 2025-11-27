@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>O que é M.2 e NVMe?</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+
+    <style>
+        :root {
+            --bg: #f6f8fb;
+            --card: #ffffff;
+            --accent: #1a73e8;
+            --muted: #5b6b7a;
+            --radius: 12px;
+            --shadow: 0 8px 24px rgba(8, 18, 51, 0.06);
+            --text: #111827;
+            --container: 1100px;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Roboto, Inter, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+
+        .topbar {
+            background-image: url('../img/reader.png');
+            background-size: cover;
+            background-position: center;
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 6px 18px rgba(19, 103, 201, 0.15);
+        }
+
+        .topbar p{
+            color: white;
+        }
+        .container {
+            max-width: var(--container);
+            margin: 22px auto;
+            padding: 18px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 18px;
+        }
+
+        h1, h2 {
+            margin: 0 0 10px;
+        }
+
+        h2 {
+            color: var(--accent);
+        }
+
+        p {
+            color: var(--muted);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 14px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #e6f1fb;
+        }
+
+        th {
+            background: #f2f8ff;
+            color: var(--accent);
+        }
+
+        .highlight {
+            background: #e9f7ff;
+            border-left: 4px solid var(--accent);
+            padding: 12px;
+            border-radius: 8px;
+            margin: 14px 0;
+            color: #0b3c80;
+        }
+
+        .warning {
+            background: #fff5e5;
+            border-left: 4px solid #ff9900;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 14px 0;
+            color: #7a4d00;
+        }
+
+        .grid {
+            display: grid;
+            gap: 14px;
+        }
+
+        @media(min-width: 820px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--muted);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="container">
+        <h1>O que é M.2 e NVMe?</h1>
+        <p class="small">Aula complementar — Conectores modernos e tecnologias de alta velocidade</p>
+    </div>
+</header>
+
+<main class="container">
+
+    <!-- Introdução -->
+    <article class="card">
+        <h2>Visão Geral</h2>
+        <p>M.2 e NVMe são tecnologias modernas de armazenamento que oferecem velocidades muito superiores aos SSDs SATA
+           tradicionais. Embora sejam usados juntos na maioria das vezes, <strong>M.2 e NVMe não são a mesma coisa</strong>.</p>
+
+        <div class="highlight">
+            📌 <strong>M.2</strong> → É o **formato físico** (o tipo da peça).<br>
+            📌 <strong>NVMe</strong> → É o **protocolo/tecnologia** que determina a velocidade.<br>
+            📌 Um M.2 pode ser SATA ou NVMe.
+        </div>
+    </article>
+
+    <!-- O que é M.2 -->
+    <article class="card">
+        <h2>O que é M.2?</h2>
+        <p>M.2 é um <strong>padrão físico de conexão</strong> criado para substituir mSATA, ocupando menos espaço e permitindo
+           maior velocidade. Ele pode ser usado por SSDs, Wi-Fi, Bluetooth e até placas de expansão.</p>
+
+        <div class="grid">
+            <div>
+                <h3>Características do M.2</h3>
+                <ul>
+                    <li>Instalado diretamente na placa-mãe</li>
+                    <li>Dispensa cabos SATA</li>
+                    <li>Formatos comuns: 2242, 2260, 2280 (o 2280 é o mais comum)</li>
+                    <li>Pode usar sinais SATA ou PCIe</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Tipos de chaveamento</h3>
+                <p>Os conectores possuem "chaves" (entalhes):</p>
+                <ul>
+                    <li><strong>M Key</strong> — usado para NVMe</li>
+                    <li><strong>B Key</strong> — usado para SATA ou PCIe x2</li>
+                    <li><strong>B+M Key</strong> — compatível com ambas tecnologias</li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <!-- O que é NVMe -->
+    <article class="card">
+        <h2>O que é NVMe?</h2>
+        <p>NVMe (Non-Volatile Memory Express) é o <strong>protocolo de comunicação mais rápido</strong> para SSDs modernos.  
+           Ele utiliza as pistas do PCI Express (PCIe), o que permite velocidades muito maiores do que SATA.</p>
+
+        <div class="grid">
+            <div>
+                <h3>Vantagens do NVMe</h3>
+                <ul>
+                    <li>Velocidades de 3500 a 7000 MB/s</li>
+                    <li>Baixa latência</li>
+                    <li>Comunicação direta com a CPU</li>
+                    <li>Ótimo para jogos, edição, inicialização rápida</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>O que ele substitui?</h3>
+                <p>O NVMe substitui o protocolo AHCI usado em SSDs e HDs SATA, que era limitado por tecnologia antiga.</p>
+            </div>
+        </div>
+
+        <div class="highlight">
+            🚀 Comparação rápida:  
+            NVMe ≈ 3500 a 7000 MB/s  
+            SATA ≈ 550 MB/s  
+            HD ≈ 120 MB/s
+        </div>
+    </article>
+
+    <!-- M.2 SATA x M.2 NVMe -->
+    <article class="card">
+        <h2>M.2 SATA x M.2 NVMe</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Característica</th>
+                    <th>M.2 SATA</th>
+                    <th>M.2 NVMe</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Protocolo</td>
+                    <td>SATA</td>
+                    <td>NVMe (PCIe)</td>
+                </tr>
+                <tr>
+                    <td>Velocidade</td>
+                    <td>Até 550 MB/s</td>
+                    <td>De 3000 a 7000 MB/s</td>
+                </tr>
+                <tr>
+                    <td>Chave</td>
+                    <td>M ou B+M</td>
+                    <td>M Key</td>
+                </tr>
+                <tr>
+                    <td>Compatibilidade</td>
+                    <td>Funciona em qualquer M.2 SATA</td>
+                    <td>Exige slot que suporte NVMe</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="warning">
+            ⚠️ Nem toda placa-mãe aceita NVMe.  
+            Sempre verifique no manual!
+        </div>
+    </article>
+
+    <!-- Prática -->
+    <article class="card">
+        <h2>Prática para a aula</h2>
+        <ol>
+            <li>Identificar na placa-mãe os slots M.2 (SATA/NVMe).</li>
+            <li>Comparar fisicamente um SSD SATA 2.5" com um M.2.</li>
+            <li>Instalar um NVMe em sala (mostrar parafuso e encaixe correto).</li>
+            <li>Mostrar diferença de velocidade em teste CrystalDiskMark.</li>
+        </ol>
+    </article>
+
+</main>
+
+<footer>
+    Curso de Manutenção de Micros • O que é M.2 e NVMe? • JG
+</footer>
+
+</body>
+</html>

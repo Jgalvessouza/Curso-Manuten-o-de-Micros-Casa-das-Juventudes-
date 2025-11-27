@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aula 7 – Armazenamento e Conectores</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1>Curso de Manutenção de Micros – Casa das Juventudes</h1>
+      <p class="subtitle">Aula 7 – Armazenamento e Conectores: HD, SSD e M.2</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="carousel">
+      <button class="nav prev" aria-label="Slide anterior">&#10094;</button>
+      <div class="slides" id="slides">
+
+        <!-- SLIDE 1 -->
+        <article class="slide" data-index="0" aria-hidden="false">
+          <img src="img/hds.png" alt="HD interno e externo" style="width:380px;">
+          <h2>Armazenamento?</h2>
+          <p>
+            O armazenamento é responsável por guardar os dados do sistema, programas e arquivos pessoais.  
+            Existem diferentes tecnologias e formatos, cada um com vantagens específicas em <strong>velocidade</strong>, <strong>capacidade</strong> e <strong>durabilidade</strong>.
+          </p>
+        </article>
+
+        <!-- SLIDE 2 -->
+        <article class="slide" data-index="1" aria-hidden="true">
+          <img src="img/discorigido.png" alt="Partes internas do HD" style="width:380px;">
+          <h2>HD (Disco Rígido)</h2>
+          <p>
+            O <strong>HD</strong> (Hard Disk) utiliza discos magnéticos e um braço mecânico para gravar e ler dados.  
+            É mais lento, porém tem maior capacidade e custo mais baixo.  
+            Sua velocidade é medida em <strong>RPM</strong> (rotações por minuto).
+          </p>
+          <ul>
+            <li>5400 RPM – mais comum em notebooks.</li>
+            <li>7200 RPM – comum em desktops.</li>
+            <li>10000 RPM – uso profissional e servidores.</li>
+          </ul>
+        </article>
+
+        <!-- SLIDE 3 -->
+        <article class="slide" data-index="2" aria-hidden="true">
+          <img src="img/ssds.png" alt="SSD interno SATA" style="width:380px;">
+          <h2>SSD (Unidade de Estado Sólido)</h2>
+          <p>
+            O <strong>SSD</strong> usa memória flash, sem partes móveis, o que o torna <strong>muito mais rápido</strong> e silencioso que o HD.  
+            Melhora o tempo de inicialização do sistema e o carregamento de programas.  
+            Sua durabilidade é medida em ciclos de gravação (TBW).
+          </p>
+        </article>
+
+        <!-- SLIDE 4 -->
+        <article class="slide" data-index="3" aria-hidden="true">
+          <img src="img/ssd_mvme.png" alt="SSD M.2 NVMe" style="width:380px;">
+          <h2>SSD M.2 e NVMe</h2>
+          <p>
+            O <strong>M.2</strong> é um formato mais compacto usado em placas modernas.  
+            Pode funcionar em dois modos:
+          </p>
+          <ul>
+            <li><strong>M.2 SATA:</strong> usa o mesmo protocolo dos SSDs convencionais.</li>
+            <li><strong>M.2 NVMe:</strong> usa o barramento PCIe, com velocidades até 7x maiores.</li>
+          </ul>
+          <p>💡 Ideal para notebooks e PCs modernos pela eficiência e economia de espaço.</p>
+        </article>
+
+        <!-- SLIDE 5 -->
+        <article class="slide" data-index="4" aria-hidden="true">
+          <img src="img/Conectores_sata.png" alt="Conectores SATA e cabos" style="width:380px;">
+          <h2>Conexões SATA</h2>
+          <p>
+            O padrão <strong>SATA</strong> (Serial ATA) é usado para conectar HDs e SSDs.  
+            Ele utiliza dois cabos:
+          </p>
+          <ul>
+            <li><strong>Dados:</strong> cabo fino e geralmente colorido (vermelho ou preto).</li>
+            <li><strong>Alimentação:</strong> vem da fonte ATX com 15 pinos.</li>
+          </ul>
+          <p>⚙️ A versão mais comum hoje é o <strong>SATA III</strong> com velocidade de até 6 Gb/s.</p>
+        </article>
+
+        <!-- SLIDE 6 -->
+        <article class="slide" data-index="5" aria-hidden="true">
+          <img src="img/diferen_ssd_mvme.png" alt="Comparação SATA e NVMe" style="width:380px;">
+          <h2>Comparativo HD x SSD x NVMe</h2>
+          <table>
+            <tr><th>Tipo</th><th>Velocidade</th><th>Vantagem</th><th>Desvantagem</th></tr>
+            <tr><td>HD</td><td>80–160 MB/s</td><td>Alta capacidade e preço baixo</td><td>Lento e frágil</td></tr>
+            <tr><td>SSD SATA</td><td>400–550 MB/s</td><td>Rápido e silencioso</td><td>Menor durabilidade</td></tr>
+            <tr><td>SSD NVMe</td><td>2500–7000 MB/s</td><td>Altíssimo desempenho</td><td>Custo elevado</td></tr>
+          </table>
+        </article>
+
+        <!-- SLIDE 7 -->
+        <article class="slide" data-index="6" aria-hidden="true">
+          <img src="img/testes.png" alt="Teste de velocidade de disco" style="width:380px;">
+          <h2>Teste de Velocidade</h2>
+          <p>
+            Para medir o desempenho das unidades, use ferramentas como:
+          </p>
+          <ul>
+            <li><strong>CrystalDiskMark:</strong> mede leitura e gravação.</li>
+            <li><strong>HD Sentinel:</strong> analisa a saúde do disco.</li>
+            <li><strong>SSD-Z:</strong> exibe informações detalhadas do modelo.</li>
+          </ul>
+          <p>💻 A prática mostrará como o SSD acelera o tempo de boot e instalação de sistemas.</p>
+        </article>
+
+        <!-- SLIDE 8 -->
+        <article class="slide" data-index="7" aria-hidden="true">
+          <img src="img/sitema.png" alt="Instalação de sistema no SSD" style="width:380px;">
+          <h2>Instalação do Sistema</h2>
+          <p>
+            Para instalar o sistema operacional:
+          </p>
+          <ul>
+            <li>Conecte o SSD via SATA ou M.2.</li>
+            <li>No BIOS, defina o modo AHCI ou NVMe.</li>
+            <li>Formate o disco e instale o Windows normalmente.</li>
+          </ul>
+          <p>⚠️ Sempre desconecte outros discos antes da instalação para evitar erros de boot.</p>
+        </article>
+
+        <!-- SLIDE 9 -->
+        <article class="slide" data-index="8" aria-hidden="true">
+          <img src="img/comclusao.png" alt="Conclusão sobre armazenamento" style="width:380px;">
+          <h2>Conclusão</h2>
+          <p>
+            Compreender os tipos de armazenamento é essencial para otimizar o desempenho e a manutenção.  
+            Saber diferenciar HD, SSD e M.2 ajuda o técnico a escolher a melhor solução para cada cliente.  
+            Na próxima aula, veremos <strong>montagem final e manutenção preventiva</strong>.
+          </p>
+        </article>
+
+      </div>
+      <button class="nav next" aria-label="Próximo slide">&#10095;</button>
+      <div class="dots" id="dots"></div>
+    </section>
+
+    
+
+    <section class="notes card">
+      <h3>Material Complementar</h3>
+      <ul>
+        <li><a href="hd_ssd.html" >HD x SSD: diferenças e vantagens</a></li>
+        <li><a href="hd_ssd.html" >O que é M.2 e NVMe?</a></li>
+        <li><a href="instalacao.html">Como instalar SSD no computador</a></li>
+      </ul>
+      <br>
+      <h3>Curiosidades videos</h3>
+      <ul>
+        <li><a href="https://youtu.be/lpYfep68xnA?si=jXeoMH5sj8qvpmSe">Como funciona o HD dos computadores</a></li>
+        <li><a href="https://youtu.be/H5GMJHqTw7Q?si=e1wqaazkjLNVmSx4">Diferença dos SSDs "M2 SATA" e "M2 NVMe"</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="topbar">
+    <div class="container">
+      <small>Material didático – Curso de Manutenção de Micros • Aula 7 – Armazenamento e Conectores • JG</small>
+    </div>
+  </footer>
+
+  <script src="../scripts/script.js"></script>
+</body>
+</html>

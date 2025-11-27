@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Como Instalar um SSD no Computador</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+
+    <style>
+        :root {
+            --bg: #f6f8fb;
+            --card: #ffffff;
+            --accent: #1a73e8;
+            --muted: #5b6b7a;
+            --radius: 12px;
+            --shadow: 0 8px 24px rgba(8, 18, 51, 0.06);
+            --text: #111827;
+            --container: 1100px;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Roboto, Inter, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .topbar {
+            background-image: url('../img/reader.png');
+            background-size: cover;
+            background-position: center;
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 6px 18px rgba(19, 103, 201, 0.15);
+        }
+
+        .container {
+            max-width: var(--container);
+            margin: 22px auto;
+            padding: 18px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 18px;
+        }
+
+        h1, h2 {
+            margin: 0 0 10px;
+        }
+
+        h2 {
+            color: var(--accent);
+        }
+
+        p {
+            color: var(--muted);
+        }
+
+        .highlight {
+            background: #e9f7ff;
+            border-left: 4px solid var(--accent);
+            padding: 12px;
+            border-radius: 8px;
+            margin: 14px 0;
+            color: #0b3c80;
+        }
+
+        .warning {
+            background: #fff5e5;
+            border-left: 4px solid #ff9900;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 14px 0;
+            color: #7a4d00;
+        }
+
+        .grid {
+            display: grid;
+            gap: 14px;
+        }
+
+        @media(min-width: 820px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--muted);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="container">
+        <h1>Como Instalar um SSD no Computador</h1>
+        <p class="small">Guia prático passo a passo — SSD SATA e SSD M.2 NVMe</p>
+    </div>
+</header>
+
+<main class="container">
+
+    <!-- Introdução -->
+    <article class="card">
+        <h2>Visão Geral</h2>
+        <p>O SSD tornou-se o upgrade mais importante para acelerar qualquer computador.  
+           Instalar um SSD é simples, mas exige atenção ao tipo de conexão: <strong>SATA ou M.2</strong>.</p>
+
+        <div class="highlight">
+            📌 <strong>SSD SATA:</strong> Instala com cabo SATA + energia.  
+            <br>
+            📌 <strong>SSD M.2:</strong> Instala direto na placa-mãe, sem cabos.  
+        </div>
+    </article>
+
+    <!-- Checklist -->
+    <article class="card">
+        <h2>Checklist antes de começar</h2>
+        <ul>
+            <li>Desligue o computador e tire o cabo da tomada.</li>
+            <li>Pressione o botão de ligar por 5s para descarregar a fonte.</li>
+            <li>Use pulseira antiestática ou toque em metal para descarregar estática.</li>
+            <li>Separe: chave Philips, cabo SATA (se for SSD SATA).</li>
+        </ul>
+    </article>
+
+    <!-- SSD SATA -->
+    <article class="card">
+        <h2>Como instalar um SSD SATA (2.5")</h2>
+
+        <div class="grid">
+            <div>
+                <h3>1. Encontre uma baia de 2.5"</h3>
+                <p>Dentro do gabinete, procure um suporte para discos de 2.5".  
+                   Caso não tenha, use adaptador de 3.5" para 2.5".</p>
+            </div>
+
+            <div>
+                <h3>2. Para fuzar o SSD</h3>
+                <p>Fixe o SSD no suporte usando 4 parafusos.  
+                   Não aperte demais para evitar danos.</p>
+            </div>
+
+            <div>
+                <h3>3. Conectar o cabo SATA</h3>
+                <p>Conecte o cabo SATA do SSD à placa-mãe.  
+                   Use as portas SATA de menor numeração (SATA 0 ou SATA 1).</p>
+            </div>
+
+            <div>
+                <h3>4. Conectar energia</h3>
+                <p>Conecte o cabo de energia SATA que vem da fonte ATX.</p>
+            </div>
+        </div>
+
+        <div class="highlight">
+            🔧 Após conectar, feche o gabinete e ligue o PC.  
+            O SSD será reconhecido na BIOS > Storage.
+        </div>
+    </article>
+
+    <!-- SSD M.2 -->
+    <article class="card">
+        <h2>Como instalar SSD M.2 (SATA ou NVMe)</h2>
+
+        <div class="grid">
+            <div>
+                <h3>1. Localize o slot M.2 na placa-mãe</h3>
+                <p>Normalmente fica próximo ao processador.  
+                   Veja se suporta SATA, NVMe ou ambos.</p>
+            </div>
+
+            <div>
+                <h3>2. Remova o parafuso</h3>
+                <p>Tire o pequeno parafuso que segura o SSD.  
+                   Guarde-o para recolocar depois.</p>
+            </div>
+
+            <div>
+                <h3>3. Encaixe o SSD</h3>
+                <p>Encaixe o SSD em um ângulo de 30°.  
+                   Empurre para baixo e alinhe com o furo.</p>
+            </div>
+
+            <div>
+                <h3>4. Parafuse</h3>
+                <p>Fixe o parafuso com cuidado — não aperte demais.</p>
+            </div>
+        </div>
+
+        <div class="warning">
+            ⚠️ M.2 SATA e M.2 NVMe são diferentes.  
+            Slots antigos podem aceitar apenas SATA!
+        </div>
+    </article>
+
+    <!-- Configuração -->
+    <article class="card">
+        <h2>Configuração após instalar</h2>
+        <p>Depois de instalado, o computador deve ser configurado corretamente:</p>
+
+        <ul>
+            <li>Acesse a BIOS e verifique se o SSD aparece em <strong>Storage</strong>.</li>
+            <li>Se for fazer instalação limpa do Windows, inicialize pelo pendrive.</li>
+            <li>Se for clonar o HD antigo, use programas como:
+                <ul>
+                    <li>Macrium Reflect</li>
+                    <li>EaseUS Todo Backup</li>
+                    <li>Acronis</li>
+                </ul>
+            </li>
+        </ul>
+    </article>
+
+    <!-- Testes -->
+    <article class="card">
+        <h2>Testes de velocidade</h2>
+        <p>Após instalar o SSD, teste sua velocidade com:</p>
+        <ul>
+            <li><strong>CrystalDiskMark</strong></li>
+            <li><strong>AS SSD Benchmark</strong></li>
+            <li><strong>Samsung Magician</strong> (para SSDs Samsung)</li>
+        </ul>
+
+        <div class="highlight">
+            🚀 Um SSD NVMe pode atingir 3000–7000 MB/s.  
+            Um SSD SATA atinge 500–550 MB/s.  
+            Um HD atinge 80–120 MB/s.
+        </div>
+    </article>
+
+</main>
+
+<footer>
+    Curso de Manutenção de Micros • Instalação de SSD • JG
+</footer>
+
+</body>
+</html>

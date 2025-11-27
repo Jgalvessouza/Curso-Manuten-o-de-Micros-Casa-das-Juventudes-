@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>HD x SSD — Diferenças e Vantagens</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+
+    <style>
+        :root {
+            --bg: #f6f8fb;
+            --card: #ffffff;
+            --accent: #1a73e8;
+            --muted: #5b6b7a;
+            --radius: 12px;
+            --shadow: 0 8px 24px rgba(8, 18, 51, 0.06);
+            --text: #111827;
+            --container: 1100px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Roboto, Inter, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .topbar {
+            background-image: url('../img/reader.png');
+            background-size: cover;
+            background-position: center;
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 6px 18px rgba(19, 103, 201, 0.15);
+        }
+
+        .container {
+            max-width: var(--container);
+            margin: 22px auto;
+            padding: 18px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 18px;
+        }
+
+        h1, h2 {
+            margin: 0 0 10px;
+        }
+
+        h2 {
+            color: var(--accent);
+        }
+
+        p {
+            color: var(--muted);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 14px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #e6f1fb;
+        }
+
+        th {
+            background: #f2f8ff;
+            color: var(--accent);
+        }
+
+        .highlight {
+            background: #e9f7ff;
+            border-left: 4px solid var(--accent);
+            padding: 12px;
+            border-radius: 8px;
+            margin: 14px 0;
+            color: #0b3c80;
+        }
+
+        .warning {
+            background: #fff5e5;
+            border-left: 4px solid #ff9900;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 14px 0;
+            color: #7a4d00;
+        }
+
+        .grid {
+            display: grid;
+            gap: 14px;
+        }
+
+        @media(min-width: 820px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--muted);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="container">
+        <h1>HD x SSD — Diferenças e Vantagens</h1>
+        <p class="small">Aula 7 – Armazenamento e conectores: evolução, funcionamento e testes</p>
+    </div>
+</header>
+
+<main class="container">
+
+    <article class="card">
+        <h2>Visão Geral</h2>
+        <p>Os sistemas de armazenamento evoluíram muito nos últimos anos. O HD (disco rígido) usa partes mecânicas,
+           enquanto o SSD utiliza memória flash de alta velocidade. A diferença impacta diretamente no desempenho geral
+           do computador, tempo de inicialização e velocidade de carregamento de programas.</p>
+
+        <div class="highlight">
+            🔎 <strong>Resumo rápido:</strong>  
+            <br>– HD = armazenamento mecânico, mais lento, barato e com maior capacidade.  
+            <br>– SSD = armazenamento eletrônico, extremamente rápido, sem partes móveis e mais resistente.
+        </div>
+    </article>
+
+    <article class="card">
+        <h2>Como funciona um HD</h2>
+        <div class="grid">
+            <div>
+                <p>O HD (Hard Disk Drive) utiliza:</p>
+                <ul>
+                    <li><strong>Pratos magnéticos</strong></li>
+                    <li><strong>Leitura por cabeças móveis</strong></li>
+                    <li><strong>Motor de giro (RPM)</strong></li>
+                </ul>
+                <p>Quanto maior a RPM (5400, 7200, 10000), maior a velocidade de leitura.</p>
+            </div>
+
+            <div>
+                <p>Principais características do HD:</p>
+                <ul>
+                    <li>Mais barato por gigabyte</li>
+                    <li>Maior capacidade de armazenamento</li>
+                    <li>Mais frágil a quedas e impactos</li>
+                    <li>Menor velocidade de acesso</li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <article class="card">
+        <h2>Como funciona um SSD</h2>
+        <p>O SSD (Solid State Drive) não possui partes móveis — funciona com chips de memória flash NAND, semelhantes
+           aos usados em pendrives, porém muito mais rápidos e resistentes.</p>
+
+        <div class="grid">
+            <div>
+                <h3>Vantagens do SSD</h3>
+                <ul>
+                    <li>Extremamente rápido (até 20x mais que um HD)</li>
+                    <li>Resistente a impactos</li>
+                    <li>Zero ruído</li>
+                    <li>Baixo consumo de energia</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Formatos comuns</h3>
+                <ul>
+                    <li>SSD SATA (2.5")</li>
+                    <li>M.2 SATA</li>
+                    <li>M.2 NVMe (o mais rápido)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="highlight">
+            🚀 <strong>NVMe pode atingir mais de 3000 MB/s.</strong>  
+            Um HD comum chega a 120 MB/s.
+        </div>
+    </article>
+
+    <article class="card">
+        <h2>Tabela Comparativa</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Característica</th>
+                    <th>HD</th>
+                    <th>SSD</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Velocidade</td>
+                    <td>Lento (mecânico)</td>
+                    <td>Extremamente rápido</td>
+                </tr>
+                <tr>
+                    <td>Resistência</td>
+                    <td>Baixa</td>
+                    <td>Alta (sem partes móveis)</td>
+                </tr>
+                <tr>
+                    <td>Ruído</td>
+                    <td>Motor e cabeças</td>
+                    <td>Silencioso</td>
+                </tr>
+                <tr>
+                    <td>Durabilidade</td>
+                    <td>Desgaste mecânico</td>
+                    <td>Desgaste por ciclos (controlado)</td>
+                </tr>
+                <tr>
+                    <td>Custo</td>
+                    <td>Mais barato</td>
+                    <td>Mais caro</td>
+                </tr>
+                <tr>
+                    <td>Capacidade</td>
+                    <td>Mais Terabytes</td>
+                    <td>Comum até 2TB</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+
+    <article class="card">
+        <h2>SATA x M.2 x NVMe (Conectores e velocidade)</h2>
+        <div class="grid">
+            <div>
+                <h3>SATA</h3>
+                <p>Taxa máxima: ~550 MB/s  
+                Usado tanto em HDs quanto SSDs.</p>
+            </div>
+            <div>
+                <h3>M.2</h3>
+                <p>Pode ser SATA ou NVMe.  
+                Fica diretamente conectado à placa-mãe (sem cabos).</p>
+            </div>
+            <div>
+                <h3>NVMe</h3>
+                <p>Comunicação via PCIe.  
+                Atinge velocidades muito superiores (3000+ MB/s).</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="card">
+        <h2>Erros comuns ao instalar SSD/HD</h2>
+        <div class="warning">
+            ❌ Instalar um SSD NVMe em slot M.2 que só aceita SATA  
+            ❌ Não clonar o sistema antes da troca  
+            ❌ Configurar o BIOS errado (AHCI/RAID)  
+            ❌ Cabos SATA frouxos causando tela azul  
+        </div>
+    </article>
+
+    <article class="card">
+        <h2>Prática para aula</h2>
+        <ol>
+            <li>Identificar HD, SSD SATA e SSD M.2.</li>
+            <li>Testar leitura e escrita usando CrystalDiskMark.</li>
+            <li>Instalar um SSD com Windows e comparar inicialização.</li>
+            <li>Conectar SATA corretamente: dados + energia.</li>
+            <li>Mostrar diferença entre M.2 SATA e M.2 NVMe.</li>
+        </ol>
+    </article>
+
+</main>
+
+<footer>
+    Curso de Manutenção de Micros • HD x SSD — Diferenças e Vantagens • JG
+</footer>
+
+</body>
+</html>
