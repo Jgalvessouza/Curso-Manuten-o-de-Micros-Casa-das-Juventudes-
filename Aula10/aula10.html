@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aula 10 – Sistemas de Arquivos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container">
+            <h1>Aula 10 – Sistemas de Arquivos</h1>
+            <p class="subtitle">Tipos, particionamento, MBR vs GPT, permissões e ferramentas de verificação</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="carousel">
+            <button class="nav prev" aria-label="Slide Anterior">&#10094;</button>
+
+            <div class="slides" id="slides">
+
+                <!-- Slide 1 -->
+                <article class="slide" data-index="0" aria-hidden="false">
+                    <img src="img/fs_overview.png" alt="Visão geral de sistemas de arquivos">
+                    <h2>O que é um Sistema de Arquivos?</h2>
+                    <p>
+                        Um sistema de arquivos organiza como os dados são armazenados e recuperados no dispositivo.
+                        Ele define estrutura de diretórios, metadados, permissões e como os blocos físicos são gerenciados.
+                    </p>
+                </article>
+
+                <!-- Slide 2 -->
+                <article class="slide" data-index="1" aria-hidden="true">
+                    <img src="img/fat_ntfs.png" alt="FAT32 e NTFS">
+                    <h2>FAT32 vs NTFS vs exFAT</h2>
+                    <p>
+                        <strong>FAT32:</strong> compatível, limitação de 4GB por arquivo.<br>
+                        <strong>NTFS:</strong> journaling, permissões, compressão e melhor segurança (Windows).<br>
+                        <strong>exFAT:</strong> ideal para USBs e cartões — suporta arquivos grandes e ampla compatibilidade.
+                    </p>
+                </article>
+
+                <!-- Slide 3 -->
+                <article class="slide" data-index="2" aria-hidden="true">
+                    <img src="img/ext4_apfs.png" alt="ext4 e APFS">
+                    <h2>ext4, APFS e outros (Linux / macOS)</h2>
+                    <p>
+                        <strong>ext4:</strong> padrão em muitas distribuições Linux — robusto e eficiente.<br>
+                        <strong>APFS:</strong> usado pelo macOS moderno, otimizado para flash/SSD.<br>
+                        Há também Btrfs, XFS e ZFS para cenários avançados.
+                    </p>
+                </article>
+
+                <!-- Slide 4 -->
+                <article class="slide" data-index="3" aria-hidden="true">
+                    <img src="img/mbR_gpt.png" alt="MBR vs GPT">
+                    <h2>MBR vs GPT (Particionamento)</h2>
+                    <p>
+                        <strong>MBR:</strong> antigo, suporta até 2 TB e 4 partições primárias.<br>
+                        <strong>GPT:</strong> moderno, suporta discos >2 TB e muitas partições; requer UEFI para boot em algumas configurações.
+                    </p>
+                </article>
+
+                <!-- Slide 5 -->
+                <article class="slide" data-index="4" aria-hidden="true">
+                    <img src="img/mounting.png" alt="Montagem e pontos de montagem">
+                    <h2>Montagem e pontos de montagem</h2>
+                    <p>
+                        Em Linux, dispositivos são <strong>mountados</strong> em diretórios. No Windows, são atribuídas letras de unidade.
+                        Entender o ponto de montagem ajuda em backups e recuperação.
+                    </p>
+                </article>
+
+                <!-- Slide 6 -->
+                <article class="slide" data-index="5" aria-hidden="true">
+                    <img src="img/permissions.png" alt="Permissões e atributos">
+                    <h2>Permissões e Atributos</h2>
+                    <p>
+                        Sistemas UNIX usam permissões (rwx) e proprietário/grupo. NTFS usa ACLs mais detalhadas.
+                        Permissões corretas são essenciais para segurança e funcionamento de serviços.
+                    </p>
+                </article>
+
+                <!-- Slide 7 -->
+                <article class="slide" data-index="6" aria-hidden="true">
+                    <img src="img/tools_chkdsk_fsck.png" alt="Ferramentas CHKDSK e fsck">
+                    <h2>Ferramentas de verificação e reparo</h2>
+                    <p>
+                        <strong>Windows:</strong> CHKDSK para verificar e reparar erros de disco.<br>
+                        <strong>Linux:</strong> fsck, e2fsck para ext* e utilitários específicos (xfs_repair, btrfs check).<br>
+                        Use sempre com o disco desmontado ou em modo de recuperação.
+                    </p>
+                </article>
+
+                <!-- Slide 8 -->
+                <article class="slide" data-index="7" aria-hidden="true">
+                    <img src="img/format_partition.png" alt="Formatar e particionar">
+                    <h2>Formatar e particionar com segurança</h2>
+                    <p>
+                        Use ferramentas como Disk Management (Windows), GParted (Linux) ou diskutil (macOS).  
+                        Sempre faça backup antes de redimensionar ou formatar partições.
+                    </p>
+                </article>
+
+                <!-- Slide 9 -->
+                <article class="slide" data-index="8" aria-hidden="true">
+                    <img src="img/backup_restore.png" alt="Backup e recuperação">
+                    <h2>Backup, recuperação e snapshots</h2>
+                    <p>
+                        Estratégias: backups regulares, imagem do disco, snapshots (ZFS, Btrfs, VSS).  
+                        Snapshots permitem recuperação rápida de estados anteriores sem clonar todo o disco.
+                    </p>
+                </article>
+
+                <!-- Slide 10 -->
+                <article class="slide" data-index="9" aria-hidden="true">
+                    <img src="img/pratica_fs.png" alt="Prática de sistemas de arquivos">
+                    <h2>Prática em sala</h2>
+                    
+                </article>
+
+            </div>
+
+            <button class="nav next" aria-label="Próximo slide">&#10095;</button>
+            <div class="dots" id="dots"></div>
+        </section>
+
+        <!-- Notes -->
+        <section class="notes card">
+            <h3>Resumo e exercicio</h3>
+            <ul>
+                <li><a href="gpt_mbr.html">Use <strong>GPT</strong> para discos modernos e >2TB; prefira UEFI ao instalar sistemas atuais.</a></li>
+                <li><a href="exercicio.html"><Strong>EXERCICIO</Strong></a></li>   
+            </ul>
+            <br>
+            <h3>Discas Importantes</h3>
+            
+            <ul>
+                <li>Para drives externos que precisam de compatibilidade ampla, <strong>exFAT</strong> é uma boa escolha.</li>
+                <li>Faça backup antes de manipular partições; ferramentas de recuperação como TestDisk podem salvar partições perdidas.</li>
+                <li>Evite formatar em FAT32 quando precisar de arquivos maiores que 4 GB.</li>
+                <li>Ao reparar discos use sempre mídia de recuperação ou monte em modo somente leitura primeiro.</li>
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer class="topbar">
+        <div class="container">
+            <p>Curso de Manutenção de Micros • Aula 10 • Sistemas de Arquivos • JG</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/script.js"></script>
+
+</body>
+
+</html>

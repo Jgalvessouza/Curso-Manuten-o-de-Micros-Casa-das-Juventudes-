@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT e UEFI em Discos Modernos</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .subtitulo {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .alerta {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            color: #856404;
+        }
+        ul li {
+            margin-bottom: 8px;
+        }
+        .dica {
+            background: #e2f0ff;
+            padding: 15px;
+            border-left: 5px solid #0056b3;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>GPT e UEFI em Discos Modernos</h1>
+
+    <div class="section">
+        <h2>O que é GPT?</h2>
+        <p>
+            O <strong>GPT (GUID Partition Table)</strong> é um <strong>padrão moderno de particionamento de disco</strong>,
+            desenvolvido para substituir o antigo <strong>MBR</strong>.
+        </p>
+
+        <ul>
+            <li>Suporta discos <strong>maiores que 2TB</strong></li>
+            <li>Permite <strong>mais de 4 partições primárias</strong></li>
+            <li>Mais seguro contra corrupção de dados</li>
+            <li>Obrigatório para sistemas modernos com UEFI</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>O que é UEFI?</h2>
+        <p>
+            O <strong>UEFI (Unified Extensible Firmware Interface)</strong> é o sucessor da BIOS tradicional.
+            Ele controla o processo de inicialização do computador.
+        </p>
+
+        <ul>
+            <li>Inicialização mais rápida</li>
+            <li>Compatível com discos GPT</li>
+            <li>Suporte a sistemas modernos (Windows 10/11, Linux)</li>
+            <li>Interface gráfica e suporte a mouse</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>GPT x MBR (Resumo Técnico)</h2>
+        <ul>
+            <li><strong>MBR:</strong> limitado a 2TB e até 4 partições</li>
+            <li><strong>GPT:</strong> suporta discos grandes e várias partições</li>
+            <li><strong>UEFI + GPT:</strong> padrão recomendado atualmente</li>
+        </ul>
+    </div>
+
+    <div class="dica">
+        💡 <strong>Dica Técnica:</strong><br>
+        Use <strong>GPT</strong> para discos modernos e maiores que <strong>2TB</strong>.<br>
+        Prefira <strong>UEFI</strong> ao instalar sistemas operacionais atuais.
+        <p><strong><a href="exercicio.html"> RESPONDA O EXERCICIO!</a></strong></p>
+    </div>
+    
+
+    <div class="alerta">
+        ⚠️ <strong>Atenção:</strong><br>
+        Sistemas antigos podem não iniciar corretamente em discos GPT sem UEFI ativado.
+    </div>
+</div>
+
+</body>
+</html>

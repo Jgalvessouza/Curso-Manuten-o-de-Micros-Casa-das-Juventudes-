@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT e UEFI – Exercício</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .dica {
+            background: #e2f0ff;
+            padding: 15px;
+            border-left: 5px solid #0056b3;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .exercicio {
+            background: #f1f8e9;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #c5e1a5;
+        }
+        button {
+            background: #0056b3;
+            color: #fff;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover {
+            background: #003d80;
+        }
+        .resultado {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .correto { color: green; }
+        .errado { color: red; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>GPT e UEFI em Discos Modernos</h1>
+
+    <p>
+        Sistemas modernos utilizam <strong>GPT</strong> e <strong>UEFI</strong>
+        para maior segurança, desempenho e compatibilidade com discos grandes.
+    </p>
+
+    <div class="dica">
+        💡 Use <strong>GPT</strong> para discos acima de <strong>2TB</strong>  
+        e <strong>UEFI</strong> para inicialização moderna.
+    </div>
+
+    <div class="exercicio">
+        <h2>📝 Exercício de Fixação</h2>
+
+        <p><strong>1️⃣ Qual padrão suporta discos maiores que 2TB?</strong></p>
+        <input type="radio" name="q1" value="MBR"> MBR<br>
+        <input type="radio" name="q1" value="GPT"> GPT<br>
+
+        <p><strong>2️⃣ O UEFI substitui qual tecnologia antiga?</strong></p>
+        <input type="radio" name="q2" value="dos"> DOS<br>
+        <input type="radio" name="q2" value="bios"> BIOS<br>
+
+        <p><strong>3️⃣ Qual é a principal função do UEFI?</strong></p>
+        <input type="radio" name="q3" value="armazenar"> Armazenar dados<br>
+        <input type="radio" name="q3" value="inicializar"> Inicializar o sistema<br>
+
+        <p><strong>4️⃣ Quantas partições primárias o GPT suporta?</strong></p>
+        <input type="radio" name="q4" value="4"> Apenas 4<br>
+        <input type="radio" name="q4" value="128"> Até 128 ou mais<br>
+
+        <p><strong>5️⃣ Qual esquema é recomendado para Windows 10/11?</strong></p>
+        <input type="radio" name="q5" value="mbrbios"> MBR + BIOS<br>
+        <input type="radio" name="q5" value="gptuefi"> GPT + UEFI<br>
+
+        <p><strong>6️⃣ Qual vantagem do GPT?</strong></p>
+        <input type="radio" name="q6" value="limitado"> Limitação de tamanho<br>
+        <input type="radio" name="q6" value="seguro"> Mais segurança e confiabilidade<br>
+
+        <p><strong>7️⃣ O Secure Boot está ligado a qual tecnologia?</strong></p>
+        <input type="radio" name="q7" value="mbr"> MBR<br>
+        <input type="radio" name="q7" value="uefi"> UEFI<br>
+
+        <button onclick="verificar()">Verificar Respostas</button>
+
+        <div id="resultado" class="resultado"></div>
+    </div>
+</div>
+
+<script>
+    function verificar() {
+        let pontos = 0;
+
+        const respostas = {
+            q1: "GPT",
+            q2: "bios",
+            q3: "inicializar",
+            q4: "128",
+            q5: "gptuefi",
+            q6: "seguro",
+            q7: "uefi"
+        };
+
+        for (let q in respostas) {
+            const marcada = document.querySelector(`input[name="${q}"]:checked`);
+            if (!marcada) {
+                document.getElementById("resultado").innerHTML =
+                    "<span class='errado'>⚠️ Responda todas as questões.</span>";
+                return;
+            }
+            if (marcada.value === respostas[q]) pontos++;
+        }
+
+        let mensagem =
+            pontos >= 6 ? "<span class='correto'>✅ Excelente domínio do conteúdo!</span>" :
+            pontos >= 4 ? "<span class='correto'>👍 Bom! Revise alguns pontos.</span>" :
+                          "<span class='errado'>❌ Precisa revisar o conteúdo.</span>";
+
+        document.getElementById("resultado").innerHTML =
+            `Você acertou <strong>${pontos}/7</strong> questões.<br>${mensagem}`;
+    }
+</script>
+
+</body>
+</html>
