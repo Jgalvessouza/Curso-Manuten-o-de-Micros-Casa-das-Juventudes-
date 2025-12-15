@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aula 11 – Instalação do Sistema Operacional</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="container">
+        <h1>Aula 11 – Instalação do Sistema Operacional</h1>
+        <p class="subtitle">Windows, drivers, otimização inicial e configuração de BIOS</p>
+    </div>
+</header>
+
+<main class="container">
+
+    <!-- Carrossel -->
+    <section class="carousel">
+        <button class="nav prev" aria-label="Slide Anterior">&#10094;</button>
+
+        <div class="slides" id="slides">
+
+            <!-- Slide 1 -->
+            <article class="slide" data-index="0" aria-hidden="false">
+                <img src="img/pendrive_boot.png" alt="Criando pendrive bootável">
+                <h2>Criando Pendrive Bootável</h2>
+                <p>
+                    Baixe a ferramenta <strong><a href="https://rufus.ie/pt_BR/" target="_blank">Rufus</a></strong> no site oficial da Microsoft.
+                    Insira o pendrive (8GB ou mais) e crie o instalador do Windows 10/11.
+                </p>
+                <p> Tambem podemos criar um predrive bootável apartir do cmd com os seguntes comamamando</p>
+            <pre>
+            <code>
+                            "diskpart"                            
+“list disk”
+“select disk (nome do disco)”
+“clean”
+“create partition primary”
+“select parttition 1”
+<strong>“format fs=ntfs quick”</strong> ou <strong>“format fs=fat32 quick”</strong>
+“exit” 
+            </code>
+            </pre>
+            </article>
+
+            <!-- Slide 2 -->
+            <article class="slide" data-index="1" aria-hidden="true">
+                <img src="img/bios_boot.png" alt="Configuração de Boot na BIOS">
+                <h2>Ajuste de Boot na BIOS</h2>
+                <p>
+                    Acesse a BIOS com <strong>DEL ou F2</strong> e configure o pendrive como primeira opção de boot.
+                    Em sistemas modernos, use o modo <strong>UEFI</strong> para melhor desempenho.
+                </p>
+            </article>
+
+            <!-- Slide 3 -->
+            <article class="slide" data-index="2" aria-hidden="true">
+                <img src="img/instalacao_windows.png" alt="Instalação do Windows">
+                <h2>Instalando o Windows</h2>
+                <p>
+                    Escolha a opção <strong>Instalar Agora</strong>, selecione o SSD para instalação
+                    e formate a partição. O processo leva de 5 a 15 minutos.
+                </p>
+            </article>
+
+            <!-- Slide 4 -->
+            <article class="slide" data-index="3" aria-hidden="true">
+                <img src="img/drivers.png" alt="Instalação de Drivers">
+                <h2>Instalação de Drivers</h2>
+                <p>
+                    Após instalar o sistema, instale os drivers da placa-mãe:
+                    <strong>chipset, áudio, LAN/Wi-Fi e gráficos</strong>.
+                    Use o site do fabricante para versões atualizadas.
+                </p>
+            </article>
+
+            <!-- Slide 5 -->
+            <article class="slide" data-index="4" aria-hidden="true">
+                <img src="img/windows_update.png" alt="Windows Update">
+                <h2>Windows Update</h2>
+                <p>
+                    Utilize o <strong>Windows Update</strong> para baixar correções,
+                    melhorias de performance e drivers adicionais recomendados pelo sistema.
+                </p>
+            </article>
+
+            <!-- Slide 6 -->
+            <article class="slide" data-index="5" aria-hidden="true">
+                <img src="img/programas_basicos.png" alt="Programas essenciais">
+                <h2>Programas Essenciais</h2>
+                <p>
+                    Instale ferramentas básicas: navegador, leitor de PDF,
+                    WinRAR/7Zip, Office, antivírus e drivers extras de vídeo (NVIDIA/AMD).
+                </p>
+            </article>
+
+            <!-- Slide 7 -->
+            <article class="slide" data-index="6" aria-hidden="true">
+                <img src="img/otimizacao.png" alt="Otimização inicial">
+                <h2>Otimização Inicial</h2>
+                <p>
+                    Ajuste inicial:
+                    <br>• Ativar modo de alto desempenho  
+                    <br>• Desinstalar programas desnecessários  
+                    <br>• Configurar restauração do sistema  
+                    <br>• Ativar proteção contra ransomware  
+                </p>
+            </article>
+
+        </div>
+
+        <button class="nav next" aria-label="Próximo slide">&#10095;</button>
+        <div class="dots" id="dots"></div>
+    </section>
+
+    <!-- Notes -->
+    <section class="notes card">
+        <h3>Dicas Importantes da Aula 11</h3>
+        <ul>
+            <li>>Baixe a ISO do Windows.</li>
+            <li>Use pendrive USB 3.0 para acelerar o processo.</li>
+            <li>Instale sempre o Windows no SSD para máximo desempenho.</li>
+            <li>Drivers atualizados resolvem 90% dos problemas de desempenho.</li>
+            <li>No Windows 11, TPM e Secure Boot precisam estar ativos.</li>
+            <li>Após instalar drivers, reinicie o computador.</li>
+            <li>Crie um ponto de restauração após finalizar todas as instalações.</li>
+            <li>Faça backup antes de formatar discos antigos.</li>
+        </ul>
+        <h3>ISOs para Baixar</h3>
+        <ul>
+            <li><a href="https://archive.org/download/w-7-prolite-4.0x-64.x-86/W7PROLITE4.0x64.x86.iso">Windwos 7 lite</a></li>
+            <li><a href="https://archive.org/download/Windows7_x86-x64_ptBR_Pack_MSDN/pt_windows_7_professional_with_sp1_x86_dvd_u_677096.iso
+">Windows 7 Pro.</a></li>
+            <li><a href="https://archive.org/download/windows-10-lite-edition-19h2-x64/Windows%2010%20Lite%20Edition%2019H2%20x64.iso">Windows- 10 lite pro 1gb.</a></li>
+            <li><a href="https://archive.org/download/windows-10-original/Windows%2010%20original.iso
+">Windows 10 pro.</a></li>
+            <li><a href="https://archive.org/download/windows-11-pro-super-lite-compact-21-h-2-build-22000.194-x-64-october-2021-file-cr/Windows%2011%20Pro%20Super%20Lite%20Compact%2021H2%20Build%2022000.194%20x64%20October%202021%20%5BFileCR%5D.iso">windows 11 lite.</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=2265055">Baixar Diretamente da Microsoft e criar prendrive com o MediaCreationTool_22H2.</a></li>
+            <li><a href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.2.0-amd64-netinst.iso">Debian 13 --Linux.</a></li>
+            <li><a href="https://ubuntu.com/download/desktop/thank-you?version=24.04.3&architecture=amd64&lts=true">Ubuntu 24.04.3 LTS -- Linux.</a></li>
+            
+        </ul>
+    </section>
+
+</main>
+
+<footer class="topbar">
+    <div class="container">
+        <p>Curso de Manutenção de Micros • Aula 11 • Instalação do Sistema Operacional</p>
+    </div>
+</footer>
+
+<script src="../scripts/script.js"></script>
+
+</body>
+
+</html>
