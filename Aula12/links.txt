@@ -1,0 +1,9 @@
+
+Windwos 7 lite -- https://archive.org/download/w-7-prolite-4.0x-64.x-86/W7PROLITE4.0x64.x86.iso
+windows 7 Pro --  https://archive.org/download/Windows7_x86-x64_ptBR_Pack_MSDN/pt_windows_7_professional_with_sp1_x86_dvd_u_677096.iso
+windows- 10 lite pro 1gb  https://archive.org/download/windows-10-lite-edition-19h2-x64/Windows%2010%20Lite%20Edition%2019H2%20x64.iso
+windows 10 pro -- https://archive.org/download/windows-10-original/Windows%2010%20original.iso
+windows 11 lite -- https://archive.org/download/windows-11-pro-super-lite-compact-21-h-2-build-22000.194-x-64-october-2021-file-cr/Windows%2011%20Pro%20Super%20Lite%20Compact%2021H2%20Build%2022000.194%20x64%20October%202021%20%5BFileCR%5D.iso
+
+ISO original por MediaCreationTool_22H2   https://go.microsoft.com/fwlink/?LinkId=2265055
+

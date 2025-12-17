@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aula 12 – Diagnóstico de Defeitos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container">
+            <h1>Aula 12 – Diagnóstico de Defeitos</h1>
+            <p class="subtitle">
+                Identificação de falhas em HD, memória, BIOS, placa-mãe, processador e barramentos
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="carousel">
+            <button class="nav prev" aria-label="Slide Anterior">&#10094;</button>
+
+            <div class="slides" id="slides">
+
+                <!-- Slide 1 -->
+                <article class="slide" data-index="0" aria-hidden="false">
+                    <img src="img/diagnostico_pc.png" alt="Diagnóstico de computador">
+                    <h2>Diagnóstico de Defeitos?</h2>
+                    <p>
+                        Diagnóstico é o processo de identificar a causa real de um problema no computador,
+                        analisando <strong>sintomas</strong>, <strong>comportamento do sistema</strong> e
+                        <strong>respostas do hardware</strong>.
+                        Um bom técnico troca o componente <strong>somente após confirmar a falha</strong>.
+                    </p>
+                </article>
+
+                <!-- Slide 2 -->
+                <article class="slide" data-index="1" aria-hidden="true">
+                    <img src="img/hd_defeito.png" alt="Problemas em HD e SSD">
+                    <h2>Problemas no HD / SSD</h2>
+                    <p>
+                        <strong>Sintomas comuns:</strong><br>
+                        • Lentidão extrema no sistema<br>
+                        • Travamentos constantes<br>
+                        • Erros ao copiar arquivos<br>
+                        • Sistema não inicia ou pede reparo<br><br>
+
+                        <strong>Causas:</strong><br>
+                        • Setores defeituosos (bad blocks)<br>
+                        • Firmware corrompido<br>
+                        • Cabo SATA defeituoso<br>
+                        • SSD com células desgastadas
+                    </p>
+                </article>
+
+                <!-- Slide 3 -->
+                <article class="slide" data-index="2" aria-hidden="true">
+                    <img src="img/format_error.png" alt="Erro ao formatar disco">
+                    <h2>Memória ROM / Disco não deixa formatar</h2>
+                    <p>
+                        <strong>Sintomas:</strong><br>
+                        • Erro durante a formatação<br>
+                        • Partição protegida contra gravação<br>
+                        • Sistema diz “disco somente leitura”<br><br>
+
+                        <strong>Causas possíveis:</strong><br>
+                        • Tabela de partição corrompida<br>
+                        • Firmware bloqueado (SSD/pendrive)<br>
+                        • Falha física no dispositivo<br>
+                        • Erros no controlador SATA/NVMe
+                    </p>
+                </article>
+
+                <!-- Slide 4 -->
+                <article class="slide" data-index="3" aria-hidden="true">
+                    <img src="img/bios_delay.png" alt="Demora ao entrar na BIOS">
+                    <h2>Demora ao entrar na BIOS</h2>
+                    <p>
+                        <strong>Sintomas:</strong><br>
+                        • Tela preta por muito tempo antes do boot<br>
+                        • BIOS demora a carregar<br><br>
+
+                        <strong>Causas:</strong><br>
+                        • HD/SSD com falha sendo detectado<br>
+                        • Pendrive conectado com erro<br>
+                        • BIOS desatualizada<br>
+                        • Problemas no barramento SATA ou USB
+                    </p>
+                </article>
+
+                <!-- Slide 5 -->
+                <article class="slide" data-index="4" aria-hidden="true">
+                    <img src="img/bsod.png" alt="Tela Azul da Morte">
+                    <h2>Tela Azul da Morte (BSOD)</h2>
+                    <p>
+                        <strong>Sintomas:</strong><br>
+                        • Reinicializações inesperadas<br>
+                        • Mensagens de erro em tela azul<br><br>
+
+                        <strong>Principais causas:</strong><br>
+                        • Memória RAM defeituosa<br>
+                        • Drivers incompatíveis<br>
+                        • Superaquecimento<br>
+                        • Erros no HD/SSD<br>
+                        • Fonte instável
+                    </p>
+                </article>
+
+                <!-- Slide 6 -->
+                <article class="slide" data-index="5" aria-hidden="true">
+                    <img src="img/ram_error.png" alt="Problemas de memória RAM">
+                    <h2>Problemas de Memória RAM</h2>
+                    <p>
+                        <strong>Sintomas:</strong><br>
+                        • Computador não dá vídeo<br>
+                        • Bipes longos ou repetidos<br>
+                        • Tela azul frequente<br>
+                        • Erro de memória insuficiente<br><br>
+
+                        <strong>Causas:</strong><br>
+                        • Módulo defeituoso<br>
+                        • Mau contato no slot<br>
+                        • Frequência incompatível<br>
+                        • Oxidação nos contatos
+                    </p>
+                </article>
+
+                <!-- Slide 7 -->
+                <article class="slide" data-index="6" aria-hidden="true">
+                    <img src="img/no_video.png" alt="Computador não dá vídeo">
+                    <h2>Não dá Vídeo (sem imagem)</h2>
+                    <p>
+                        <strong>Possíveis causas:</strong><br>
+                        • Memória RAM mal encaixada<br>
+                        • Processador com defeito<br>
+                        • BIOS corrompida<br>
+                        • Placa de vídeo com falha<br>
+                        • Fonte sem energia suficiente
+                    </p>
+                </article>
+
+                <!-- Slide 8 -->
+                <article class="slide" data-index="7" aria-hidden="true">
+                    <img src="img/bios_problem.png" alt="Problemas de BIOS">
+                    <h2>Problemas na BIOS da Placa-Mãe</h2>
+                    <p>
+                        <strong>Sintomas:</strong><br>
+                        • Não salva configurações<br>
+                        • Data e hora resetam<br>
+                        • PC não inicia<br><br>
+
+                        <strong>Causas:</strong><br>
+                        • Bateria CR2032 descarregada<br>
+                        • Atualização de BIOS mal sucedida<br>
+                        • Arquivo de BIOS corrompido
+                    </p>
+                </article>
+
+                <!-- Slide 9 -->
+                <article class="slide" data-index="8" aria-hidden="true">
+                    <img src="img/barramento.png" alt="Problemas nos barramentos">
+                    <h2>Problemas nos Barramentos da Placa</h2>
+                    <p>
+                        <strong>Sintomas:</strong><br>
+                        • Dispositivos não reconhecidos<br>
+                        • USBs falhando<br>
+                        • HD some da BIOS<br><br>
+
+                        <strong>Causas:</strong><br>
+                        • Trilhas rompidas<br>
+                        • Solda fria<br>
+                        • Curto causado por oxidação<br>
+                        • Controlador danificado
+                    </p>
+                </article>
+
+                <!-- Slide 10 -->
+                <article class="slide" data-index="9" aria-hidden="true">
+                    <img src="img/cpu_problem.png" alt="Problemas no processador">
+                    <h2>Problemas no Processador (CPU)</h2>
+                    <p>
+                        <strong>Sintomas:</strong><br>
+                        • PC liga mas não dá vídeo<br>
+                        • Desliga sozinho<br>
+                        • Superaquecimento rápido<br><br>
+
+                        <strong>Causas:</strong><br>
+                        • Pinos tortos (AMD / socket)<br>
+                        • Pasta térmica seca ou ausente<br>
+                        • Cooler mal instalado<br>
+                        • Processador queimado (raro, mas possível)
+                    </p>
+                </article>
+
+                <!-- Slide 11 -->
+                <article class="slide" data-index="10" aria-hidden="true">
+                    <img src="img/metodologia.png" alt="Metodologia de diagnóstico">
+                    <h2>Metodologia Correta de Diagnóstico</h2>
+                    <p>
+                        ✔ Testar com o mínimo de componentes<br>
+                        ✔ Trocar apenas um componente por vez<br>
+                        ✔ Usar multímetro e software de teste<br>
+                        ✔ Observar bipes, LEDs e códigos POST<br>
+                        ✔ Nunca assumir defeito sem testar
+                    </p>
+                </article>
+
+            </div>
+
+            <button class="nav next" aria-label="Próximo slide">&#10095;</button>
+            <div class="dots" id="dots"></div>
+        </section>
+
+        <!-- Notes -->
+        <section class="notes card">
+            <h3>Resumo da Aula</h3>
+            <ul>
+                <li>Diagnóstico começa pela observação dos sintomas.</li>
+                <li>Nem todo defeito é componente queimado — muitas vezes é mau contato.</li>
+                <li>BIOS, memória e disco são as maiores causas de falhas.</li>
+                <li>Troca sem diagnóstico gera custo e erro técnico.</li>
+            </ul>
+
+            <br>
+
+            <h3>Dicas de Técnico</h3>
+            <ul>
+                <li>Limpe e teste antes de substituir.</li>
+                <li>Use sempre peças conhecidas para teste.</li>
+                <li>Atualizações de BIOS exigem cuidado extremo.</li>
+                <li>Documente o defeito antes de devolver o equipamento.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="topbar">
+        <div class="container">
+            <p>Curso de Manutenção de Micros • Aula 12 • Diagnóstico de Defeitos • JG</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>
