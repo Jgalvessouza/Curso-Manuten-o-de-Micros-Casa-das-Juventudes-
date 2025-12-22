@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Links de Programas Básicos</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+
+    <style>
+        :root {
+            --bg: #f5f7fb;
+            --card: #ffffff;
+            --accent: #1367c9;
+            --muted: #5b6b7a;
+            --radius: 12px;
+            --container: 1200px;
+            --text: #111827;
+            --shadow: 0 8px 24px rgba(8, 18, 51, 0.06);
+        }
+
+        * { box-sizing: border-box }
+
+        body {
+            margin: 0;
+            font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 20px
+        }
+
+        .topbar {
+           background-image: url('../img/reader.png');
+            background-size: cover;
+            /* cobre toda a tela */
+            background-repeat: no-repeat;
+            /* não repete a imagem */
+            background-position: center;
+            color: #fff;
+            padding: 18px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px
+        }
+
+        @media (max-width:920px) {
+            main { grid-template-columns: 1fr }
+        }
+
+        .card {
+            background: var(--card);
+            padding: 18px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        h1, h2, h3 { margin: 0 0 10px }
+        h2 { color: var(--accent) }
+        p { color: var(--muted) }
+
+        ul { margin-left: 18px }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background: #f0f7ff;
+            border-left: 4px solid var(--accent);
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            font-size: 13px;
+            margin: 25px 0
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="container">
+            <h1>Curso de Manutenção de Micros</h1>
+            <p class="subtitle">Links para Download de Programas Básicos</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <article class="card">
+
+            <section>
+                <h2>Introdução</h2>
+                <p>
+                    Após a instalação do sistema operacional, é essencial instalar
+                    <strong>programas básicos</strong> para garantir produtividade,
+                    compatibilidade de arquivos e segurança do computador.
+                </p>
+
+                <div class="highlight">
+                    💡 <strong>Dica:</strong> Sempre prefira baixar programas diretamente
+                    do <strong>site oficial</strong> para evitar vírus e versões falsas.
+                </div>
+            </section>
+
+            <section>
+                <h2>Programas Essenciais</h2>
+                <ul>
+                    <li>
+                        <strong>Pacote Office (Microsoft Office):</strong><br>
+                        <a href="https://www.microsoft.com/pt-br/microsoft-365" target="_blank">
+                            https://www.microsoft.com/pt-br/microsoft-365
+                        </a>
+                    </li>
+
+                    <li>
+                        <strong>LibreOffice (alternativa gratuita):</strong><br>
+                        <a href="https://www.libreoffice.org/download/download/" target="_blank">
+                            https://www.libreoffice.org
+                        </a>
+                    </li>
+
+                    <li>
+                        <strong>WinRAR (compactador):</strong><br>
+                        <a href="https://www.win-rar.com/download.html" target="_blank">
+                            https://www.win-rar.com
+                        </a>
+                    </li>
+
+                    <li>
+                        <strong>7-Zip (alternativa gratuita):</strong><br>
+                        <a href="https://www.7-zip.org/" target="_blank">
+                            https://www.7-zip.org
+                        </a>
+                    </li>
+
+                    <li>
+                        <strong>Adobe Reader (leitor de PDF):</strong><br>
+                        <a href="https://get.adobe.com/br/reader/" target="_blank">
+                            https://get.adobe.com/br/reader/
+                        </a>
+                    </li>
+
+                    <li>
+                        <strong>Navegador Google Chrome:</strong><br>
+                        <a href="https://www.google.com/chrome/" target="_blank">
+                            https://www.google.com/chrome/
+                        </a>
+                    </li>
+
+                    <li>
+                        <strong>Mozilla Firefox:</strong><br>
+                        <a href="https://www.mozilla.org/pt-BR/firefox/new/" target="_blank">
+                            https://www.mozilla.org/firefox
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Antivírus</h2>
+                <p>
+                    O antivírus protege o sistema contra vírus, ransomwares
+                    e softwares maliciosos.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Windows Defender (nativo do Windows):</strong><br>
+                        Já vem instalado e é suficiente para a maioria dos usuários.
+                    </li>
+
+                    <li>
+                        <strong>Avast Free Antivirus:</strong><br>
+                        <a href="https://www.avast.com/pt-br/free-antivirus-download" target="_blank">
+                            https://www.avast.com
+                        </a>
+                    </li>
+
+                    <li>
+                        <strong>AVG Free Antivirus:</strong><br>
+                        <a href="https://www.avg.com/pt-br/free-antivirus-download" target="_blank">
+                            https://www.avg.com
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+        </article>
+
+        <aside class="card">
+            <h3>Checklist Pós-Instalação</h3>
+            <ul>
+                <li>Sistema atualizado</li>
+                <li>Drivers instalados</li>
+                <li>Programas essenciais instalados</li>
+                <li>Antivírus ativo</li>
+                <li>Navegador configurado</li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <small>Material de apoio – Curso de Manutenção de Micros • JG</small>
+        </div>
+    </footer>
+
+</body>
+</html>
