@@ -75,6 +75,52 @@ main.container {
   overflow: hidden;
 }
 
+/* --- Estilos do Modo Tela Cheia --- */
+#fullscreen-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  box-shadow: inset 0px 0px 30px 5px #276cdb;
+}
+
+.carousel.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 30px !important;
+  border-radius: 0;
+  box-shadow: none !important;
+  z-index: 9999;
+  overflow-y: auto;
+
+}
+
+.carousel.fullscreen .slide img {
+  background-color: #6b7280;
+  max-height: 60vh;
+  width: auto !important;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 5px #272adb;
+}
+
+.carousel.fullscreen #fullscreen-toggle::before {
+  content: '\26F7';
+
+}
+
 .slides {
   min-height: 260px
 }
@@ -102,7 +148,7 @@ main.container {
 
 .slide img {
   width: 380px;
-  height: ;
+  height:auto ;
   max-width: 80%;
   border-radius: 8px;
   box-shadow: var(--shadow);
@@ -175,16 +221,19 @@ main.container {
   font-weight: 500;
   transition: color 0.2s ease, transform 0.2s ease;
 }
+
 .frac {
   display: inline-block;
   text-align: center;
   line-height: 1.1;
 }
+
 .fraction-line {
   border-top: 2px solid #000;
   width: 20px;
   margin: 2px auto;
 }
+
 footer.topbar {
   margin-top: 12px;
   padding: 12px 0
