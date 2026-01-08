@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aula 01 – História da Internet</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container">
+            <h1>Aula 01 – História da Internet</h1>
+            <p class="subtitle">
+                Do Sputnik à criação da ARPANET, DARPA e os fundamentos das redes
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="carousel">
+            <button class="nav prev" aria-label="Slide Anterior">&#10094;</button>
+
+            <div class="slides" id="slides">
+                <button id="fullscreen-toggle" aria-label="Tela Cheia" title="Tela Cheia">
+                    &#x26F6;
+                </button>
+
+                <!-- Slide 1 -->
+                <article class="slide" data-index="0" aria-hidden="false">
+                    <img src="img/sput.webp" alt="Satélite Sputnik">
+                    <h2>O Início de Tudo – Sputnik (1957)</h2>
+                    <p>
+                        Em 1957 a União Soviética lançou o satélite <strong>Sputnik</strong>.
+                        Isso causou grande impacto nos Estados Unidos, gerando medo e teorias
+                        de conspiração sobre espionagem e superioridade tecnológica.
+                    
+                    </p>
+                </article>
+
+                <!-- Slide 2 -->
+                <article class="slide" data-index="1" aria-hidden="true">
+                    <img src="img/guerra_fria.jfif" alt="Guerra Fria">
+                    <h2>Guerra Fria e a Corrida Tecnológica</h2>
+                    <p>
+                        Durante a Guerra Fria, EUA e URSS disputavam poder militar,
+                        científico e tecnológico.<br><br>
+                        O maior medo dos EUA era que um ataque destruísse seus centros
+                        de comunicação, deixando o país isolado.
+                    </p>
+                </article>
+
+                <!-- Slide 3 -->
+                <article class="slide" data-index="2" aria-hidden="true">
+                    <img src="img/darpa.jfif" alt="DARPA">
+                    <h2>Criação da DARPA</h2>
+                    <p>
+                        Para responder à ameaça soviética, os EUA criaram a
+                        <strong>DARPA</strong> (Defense Advanced Research Projects Agency).<br><br>
+                        Objetivo: desenvolver tecnologias avançadas para defesa,
+                        ciência e comunicação segura.
+                    </p>
+                </article>
+
+                <!-- Slide 4 -->
+                <article class="slide" data-index="3" aria-hidden="true">
+                    <img src="img/nasa.png" alt="NASA">
+                    <h2>Papel da NASA</h2>
+                    <p>
+                        A NASA também foi criada nesse contexto, focando em pesquisa
+                        espacial, mas compartilhando tecnologias com a DARPA.<br><br>
+                        Muitas tecnologias usadas hoje em redes e computação surgiram
+                        desses projetos militares e científicos.
+                    </p>
+                </article>
+
+                <!-- Slide 5 -->
+                <article class="slide" data-index="4" aria-hidden="true">
+                    <img src="img/arpanet.jfif" alt="ARPANET">
+                    <h2>ARPANET – O Nascimento da Internet</h2>
+                    <p>
+                        A <strong>ARPANET</strong> foi a primeira rede de computadores
+                        do mundo.<br><br>
+                        Ela foi criada para que os dados não ficassem em um único ponto.
+                        Se um nó falhasse, a comunicação continuaria por outro caminho.
+                    </p>
+                </article>
+
+                <!-- Slide 6 -->
+                <article class="slide" data-index="5" aria-hidden="true">
+                    <img src="img/rede_descentralizada.png" alt="Rede descentralizada">
+                    <h2>Rede Descentralizada</h2>
+                    <p>
+                        Diferente de um sistema centralizado, a ARPANET funcionava
+                        como uma <strong>rede distribuída</strong>.<br><br>
+                        Isso é a base da Internet atual: múltiplos caminhos,
+                        redundância e tolerância a falhas.
+                    </p>
+                </article>
+
+                <!-- Slide 7 -->
+                <article class="slide" data-index="6" aria-hidden="true">
+                    <img src="img/pacotes.jpg" alt="Pacotes de dados">
+                    <h2>Comutação por Pacotes</h2>
+                    <p>
+                        Os dados passaram a ser enviados em pequenos pacotes.<br><br>
+                        Cada pacote pode seguir um caminho diferente até o destino,
+                        aumentando a segurança e a confiabilidade da comunicação.
+                    </p>
+                </article>
+
+                <!-- Slide 8 -->
+                <article class="slide" data-index="7" aria-hidden="true">
+                    <img src="img/internet_web.png" alt="Internet e Web">
+                    <h2>Internet ≠ Web</h2>
+                    <p>
+                        🌐 <strong>Internet:</strong> infraestrutura de redes.<br>
+                        🧠 <strong>Web:</strong> serviço que roda sobre a Internet.<br><br>
+                        A Internet já existia antes dos sites e navegadores.
+                    </p>
+                </article>
+
+                <!-- Slide 9 -->
+                <article class="slide" data-index="8" aria-hidden="true">
+                    <img src="img/conclusao_redes.png" alt="Conclusão">
+                    <h2>Conclusão da Aula</h2>
+                    <p>
+                        ✔ A Internet nasceu por motivos militares<br>
+                        ✔ O Sputnik foi o estopim<br>
+                        ✔ A descentralização é a base das redes<br>
+                        ✔ A ARPANET deu origem à Internet moderna
+                    </p>
+                </article>
+
+            </div>
+
+            <button class="nav next" aria-label="Próximo slide">&#10095;</button>
+            <div class="dots" id="dots"></div>
+        </section>
+
+        <section class="notes card">
+            <h3>Atividade Prática</h3>
+            <ul>
+                <li>Explique com suas palavras o que foi o Sputnik.</li>
+                <li>Diferencie Internet de Web.</li>
+                <li>Explique por que a descentralização é importante.</li>
+                <li>Dê um exemplo moderno de rede distribuída.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="topbar">
+        <div class="container">
+            <p>Curso Bônus – Redes de Computadores • Aula 01 • História da Internet • JG</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>
