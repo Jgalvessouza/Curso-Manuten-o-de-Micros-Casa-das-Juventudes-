@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Aula 04 – Topologias de Rede</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container">
+            <h1>Aula 04 – Topologias de Rede</h1>
+            <p class="subtitle">Formas de organização da rede</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="carousel">
+            <button class="nav prev" aria-label="Slide Anterior">&#10094;</button>
+
+            <div class="slides">
+                <button id="fullscreen-toggle" aria-label="Tela Cheia" title="Tela Cheia">
+                    &#x26F6;
+                </button>
+
+                <article class="slide" data-index="0" aria-hidden="false">
+                    <img src="img/topografia.png" alt="topografia de redes">
+                    <h2>O que é Topologia?</h2>
+                    <p>
+                        Topologia de rede é a forma como os dispositivos (computadores, roteadores, switches, etc.) são
+                        organizados e interligados em uma rede.
+                        Ela define como os dados circulam, influenciando o desempenho, a segurança e a facilidade de
+                        manutenção da rede.
+                    </p>
+                </article>
+
+                <article class="slide" data-index="1" aria-hidden="true">
+                    <img src="img/barramento.png" alt="topografia emBarramento">
+                    <h2>Topologia em Barramento</h2>
+                    <p>
+                        Topologia em Barramento é um tipo de topologia onde todos os dispositivos são conectados a um
+                        único cabo principal.
+                        Os dados trafegam por esse cabo e chegam a todos os dispositivos, mas apenas o destinatário
+                        correto utiliza a informação.
+
+                        ❌ Difícil manutenção, pois é complicado identificar onde está o problema
+                        ❌ Um defeito no cabo principal pode derrubar toda a rede
+                    </p>
+                </article>
+
+                <article class="slide" data-index="2" aria-hidden="true">
+                    <img src="img/estrela.png" alt="topografia Estrela">
+                    <h2>Topologia em Estrela</h2>
+                    <p>
+                        Topologia em Estrela é o modelo em que todos os dispositivos são conectados a um ponto central,
+                        como um switch ou roteador.
+                        Toda a comunicação passa por esse equipamento central.
+
+                        ✔ É a topologia mais usada atualmente
+                        ✔ Fácil manutenção, pois se um cabo ou dispositivo falhar, apenas aquele ponto é afetado
+                    </p>
+                </article>
+
+                <article class="slide" data-index="3" aria-hidden="true">
+                    <img src="img/anel.png" alt="topografia Anel">
+                    <h2>Topologia em Anel</h2>
+                    <p>
+                        Topologia em Anel é uma forma de rede onde os dispositivos são ligados em sequência, formando um
+                        circuito fechado (anel).
+                        Os dados passam de um dispositivo para o outro até chegar ao destino.
+
+                        ❌ Pouco usada atualmente, pois uma falha em um ponto pode interromper toda a comunicação e a
+                        manutenção é mais complexa.
+                    </p>
+                </article>
+
+                <article class="slide" data-index="4" aria-hidden="true">
+                    <img src="img/malha.png" alt="topografia malha">
+                    <h2>Topologia em Malha</h2>
+                    <p>
+                        Topologia em Malha é uma estrutura de rede onde existem vários caminhos de comunicação entre os
+                        dispositivos.
+                        Isso significa que, se um caminho falhar, os dados podem seguir por outro.
+
+                        ✔ Alta confiabilidade e redundância, ideal para redes críticas
+                        ❌ Alto custo, devido à grande quantidade de cabos, equipamentos e configuração complexa
+                    </p>
+                </article>
+
+                <article class="slide" data-index="5" aria-hidden="true">
+                    <img src="img/comclusao.png" alt="Comclusao">
+                    <h2>Conclusão</h2>
+                    <p>
+                        A topologia mais comum hoje é a <strong>estrela</strong>, usando switches.
+                    </p>
+                </article>
+
+            </div>
+
+            <button class="nav next" aria-label="Próximo slide">&#10095;</button>
+            <div class="dots" id="dots"></div>
+        </section>
+
+        <section class="notes card">
+            <h3>Atividade</h3>
+            <ul>
+                <li>Qual topologia é mais usada hoje?</li>
+                <li>Qual tem maior custo?</li>
+                <li>Qual apresenta maior risco de falha geral?</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="topbar">
+        <p>Curso Bônus – Redes • Aula 04</p>
+    </footer>
+
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>
