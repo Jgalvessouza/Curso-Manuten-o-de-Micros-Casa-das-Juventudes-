@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Aula 06 – Dispositivos de Rede</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container">
+            <h1>Aula 06 – Dispositivos de Rede</h1>
+            <p class="subtitle">Hub, Switch, Roteador e Modem</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="carousel">
+            <button class="nav prev" aria-label="Slide Anterior">&#10094;</button>
+
+            <div class="slides">
+
+                <button id="fullscreen-toggle" aria-label="Tela Cheia" title="Tela Cheia">
+                    &#x26F6;
+                </button>
+                <article class="slide" data-index="0" aria-hidden="false">
+                    <img src="img/dispositivos.png" alt="Dispositivos">
+                    <h2>Dispositivos de rede</h2>
+                    <p>
+                        Os Dispositivos de rede são equipamentos responsáveis por interligar computadores, celulares,
+                        impressoras e outros dispositivos, permitindo que eles troquem dados e se comuniquem entre si.
+
+                        Eles funcionam como os “organizadores do tráfego de dados” dentro de uma rede.</p>
+
+                    <ul>
+                    <h4>🧩 Para que serve ?</h4>
+                        <li>Conectar dispositivos entre si</li>
+                        <li>Controlar o envio e recebimento de dados</li>
+                        <li>Permitir acesso à internet</li>
+                        <li>Garantir comunicação correta e segura</li>
+                    </ul>
+                    <h4>🧩 Exemplos de dispositivos de rede</h4>
+                    <ul>
+                        <li>Roteador ou ONT– distribui a internet</li>
+                        <li>Switch – conecta vários dispositivos em uma rede local</li>
+                        <li>Access Point  dispinivel nos ONT e roteadores– fornece acesso Wi-Fi</li>
+                    </ul>
+  
+                </article>
+
+                <article class="slide" data-index="1" aria-hidden="true">
+                    <img src="img/rub.png" alt="Hub">
+                    <h2>Hub</h2>
+                    <p>
+                        O hub é um dispositivo de rede simples, muito utilizado no início das redes de
+                        computadores.<br><br>
+
+                        ⚙️ Como ele funciona?<br>
+
+                        O hub recebe os dados de um dispositivo e envia essas informações para todas as portas, sem
+                        saber qual é o destino correto.<br>
+
+                        ❌ Desvantagens do Hub<br>
+
+                        ❌ Envia dados para todas as portas, causando tráfego desnecessário<br>
+
+                        ❌ Pouco seguro, pois todos os dispositivos recebem os dados<br>
+
+                        ❌ Baixo desempenho, com muitas colisões de dados<br>
+
+                        ❌ Quase não utilizado hoje, pois foi substituído por dispositivos mais inteligentes<br><br>
+
+                        🔄 Por que caiu em desuso?<br>
+
+                        Atualmente, o switch faz a mesma função de forma muito mais eficiente, enviando os dados apenas
+                        para o dispositivo correto.
+                    </p>
+                </article>
+
+                <article class="slide" data-index="2" aria-hidden="true">
+                    <img src="img/swich.png" alt="Switch">
+                    <h2>Switch</h2>
+                    <p>
+                        O switch é um dispositivo de rede inteligente, muito usado em redes locais (LAN) como casas,
+                        escolas e empresas.<br>
+
+                        ⚙️ Como ele funciona?<br>
+
+                        Diferente do hub, o switch identifica o endereço MAC de cada dispositivo conectado.
+                        Assim, quando recebe um dado, ele envia apenas para a porta do dispositivo de destino correto,
+                        evitando tráfego desnecessário.<br><br>
+
+                        ✅ Vantagens do Switch<br>
+
+                        ✔ Envia dados somente para o destino correto<br>
+                        ✔ Mais rápido, pois reduz colisões de dados<br>
+                        ✔ Mais seguro, já que outros dispositivos não recebem informações que não são para eles<br>
+                        ✔ Muito usado em redes locais modernas<br><br>
+
+                        🏢 Onde é utilizado?<br>
+
+                        Redes domésticas<br>
+
+                        Laboratórios de informática<br>
+
+                        Empresas e escolas<br>
+                    </p>
+                </article>
+
+                <article class="slide" data-index="3" aria-hidden="true">
+                    <img src="img/roteador.png" alt="Roteador">
+                    <h2>Roteador</h2>
+                    <p>
+                        O roteador é o dispositivo de rede responsável por interligar redes diferentes, permitindo que
+                        elas se comuniquem entre si.<br>
+
+                        🌐 Como ele funciona?<br>
+
+                        O roteador recebe os dados de uma rede e decide o melhor caminho para enviá-los até outra rede.
+                        No uso doméstico, ele conecta a rede local da casa à Internet.<br>
+
+                        🏠 Exemplo prático<br>
+
+                        ✔ Dispositivos da casa (computador, celular, TV) → rede local<br>
+                        ✔ Roteador → conecta essa rede à Internet<br>
+
+                        🔐 Funções importantes do roteador<br>
+
+                        Distribuir internet para vários dispositivos<br>
+
+                        Criar rede Wi-Fi<br>
+
+                        Controlar e proteger a rede (firewall, senha)<br>
+
+                        Gerenciar endereços IP (DHCP)<br>
+                    </p>
+                </article>
+
+                <article class="slide" data-index="4" aria-hidden="true">
+                    <img src="img/modem.png" alt="Modem">
+                    <h2>Modem</h2>
+                    <p>
+                        O modem é o dispositivo responsável por fazer a comunicação entre o provedor de internet e a sua
+                        rede local.<br>
+
+                        🔄 Função principal<br>
+
+                        O nome modem vem de Modulador/Demodulador.
+                        Ele converte o sinal que vem do provedor para um formato que os dispositivos da rede local
+                        conseguem entender.<br><br>
+
+                        📡 Como acontece na prática?<br>
+
+                        1️⃣ O provedor envia o sinal de internet
+
+                        Pode ser por fibra óptica, cabo coaxial ou rádio<br>
+
+                        2️⃣ O modem recebe esse sinal
+
+                        O sinal pode ser luz (fibra) ou elétrico (cabo/radio)<br>
+
+                        3️⃣ O modem converte o sinal
+
+                        Transforma o sinal do provedor em dados de rede (Ethernet)<br>
+
+                        4️⃣ A rede local recebe o sinal
+
+                        O sinal convertido é enviado ao roteador ou diretamente aos dispositivos<br><br>
+
+                        🏠 Exemplo em casa<br>
+
+                        Internet do provedor → Modem → Roteador → Computadores e celulares
+                    </p>
+                </article>
+
+                <article class="slide" data-index="5" aria-hidden="true">
+                    <img src="img/resumo.png" alt="imagem Resumo">
+                    <h2>Resumo</h2>
+                    <p>
+                        🔹 Hub → Obsoleto<br>
+                        O hub é um dispositivo antigo que envia os dados para todas as portas, sem controle ou
+                        segurança.
+                        Por ter baixo desempenho e pouca segurança, praticamente não é mais utilizado hoje.<br><br>
+
+                        🔹 Switch → Rede local<br>
+                        O switch é usado para conectar vários dispositivos dentro da mesma rede local (LAN).
+                        Ele envia os dados somente para o destino correto, sendo rápido, eficiente e seguro.<br><br>
+
+                        🔹 Roteador → Acesso à Internet<br>
+                        O roteador é responsável por ligar redes diferentes, como a rede local à Internet.
+                        Ele distribui a internet para os dispositivos e pode oferecer Wi-Fi e proteção da rede.
+                    </p>
+                </article>
+
+            </div>
+
+            <button class="nav next" aria-label="Próximo slide">&#10095;</button>
+            <div class="dots" id="dots"></div>
+        </section>
+
+        <section class="notes card">
+            <h3>Atividade</h3>
+            <ul>
+                <li>Qual a diferença entre hub e switch?</li>
+                <li>Qual dispositivo conecta a rede à Internet?</li>
+                <li>Onde o modem é utilizado?</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="topbar">
+        <p>Curso Bônus – Redes • Aula 06</p>
+    </footer>
+
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>
