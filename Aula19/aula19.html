@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Aula 05 – Cabos e Conectores</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container">
+            <h1>Aula 05 – Cabos e Conectores</h1>
+            <p class="subtitle">Meios físicos de transmissão</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="carousel">
+            <button class="nav prev" aria-label="Slide Anterior">&#10094;</button>
+
+            <div class="slides">
+                <button id="fullscreen-toggle" aria-label="Tela Cheia" title="Tela Cheia">
+                    &#x26F6;
+                </button>
+
+                <article class="slide" data-index="0" aria-hidden="false">
+                    <img src="img/meios.png" alt="Meios de transmiçoes">
+                    <h2>Meios de Transmissão</h2>
+                    <p>
+                        Meios de Transmissão são os caminhos físicos ou não físicos por onde os dados (informações)
+                        trafegam em uma rede de computadores.
+
+                        Eles funcionam como “estradas” que levam os dados de um dispositivo para outro, como de um
+                        computador para um roteador ou para a internet.
+
+                        Em uma rede, os dados podem trafegar de duas formas:<br>
+
+                        🔹 Por cabos (meios guiados)<br>
+                        🔹 Pelo ar (meios não guiados)<br>
+
+                        Sem um meio de transmissão, os dispositivos até podem existir, mas não conseguem se comunicar.
+                    </p>
+                </article>
+
+                <article class="slide" data-index="1" aria-hidden="true">
+                    <img src="img/cabo.png" alt="Cabo de Rede ">
+                    <h2>Cabo de Par Trançado</h2>
+                    <p>
+                        O cabo de par trançado é o meio de transmissão mais utilizado em redes de computadores,
+                        principalmente em redes LAN, baixo custo, é fácil de instalar, oferece boa velocidade de transmissão.<br>
+
+                        <strong>🔌 Conector RJ-45</strong><br>
+
+                        Esse cabo utiliza o conector RJ-45, que é o plug padrão das redes Ethernet.
+                        É ele que conecta o cabo ao computador, switch, roteador ou modem.<br>
+
+                        <strong>🧵 Como funciona?</strong><br>
+
+                        O cabo é formado por pares de fios trançados entre si.
+                        Esse trançamento reduz interferências elétricas e perda de sinal, garantindo uma comunicação
+                        mais estável.<br>
+
+                       <Strong> 📊 Categorias do Cabo de Par Trançado</Strong><br>
+
+                        As categorias indicam velocidade e qualidade do cabo:<br>
+
+                        <strong>✔ Cat5e</strong>
+
+                        Velocidade de até 1 Gbps
+
+                        Muito comum em redes domésticas e escolares<br>
+
+                       <strong> ✔ Cat6</strong>
+
+                        Velocidade de até 10 Gbps (em distâncias menores)
+
+                        Menos interferência que o Cat5e<br>
+
+                       <strong> ✔ Cat6a</strong>
+
+                        Velocidade de até 10 Gbps em distâncias maiores
+
+                        Melhor proteção contra interferências
+
+                        Usado em redes profissionais e data centers
+                    </p>
+                </article>
+
+                <article class="slide" data-index="2" aria-hidden="true">
+                    <img src="img/cabo_coaxial.png" alt="Cabo Coaxial">
+                    <h2>Cabo Coaxial</h2>
+                    <p>
+                        O cabo coaxial é um tipo de meio de transmissão mais antigo, muito utilizado no passado para TV
+                        a cabo e internet banda larga antiga.
+
+                        🧵 Como ele é formado?
+
+                        O cabo coaxial possui:
+
+                        Um fio central de cobre (por onde o sinal passa)
+
+                        Uma camada isolante
+
+                        Uma malha metálica que protege contra interferências
+
+                        Uma capa externa de proteção
+
+                        Essa estrutura ajuda a reduzir ruídos e interferências.
+
+                        📺 Onde foi usado?
+
+                        ✔ TV a cabo
+                        ✔ Internet antiga (como redes de operadoras e padrões antigos de Ethernet, ex: 10Base2 e
+                        10Base5)<br>
+
+                        ❌ Por que é pouco usado hoje em redes modernas?<br>
+
+                        Menor flexibilidade de instalação
+
+                        Velocidade e escalabilidade limitadas em redes locais
+
+                        Foi substituído pelo cabo de par trançado e pela fibra óptica, que oferecem mais desempenho
+                    </p>
+                </article>
+
+                <article class="slide" data-index="3" aria-hidden="true">
+                    <img src="img/fibra.png" alt="fibra ótica">
+                    <h2>Fibra Óptica</h2>
+                    <p>
+                        A fibra óptica é o meio de transmissão mais moderno e eficiente usado atualmente em redes de
+                        computadores e telecomunicações.<br>
+
+                        ⚡ Altíssima velocidade
+
+                        A transmissão dos dados é feita por pulsos de luz, não por eletricidade.
+                        Isso permite velocidades muito altas, chegando a dezenas ou centenas de Gbps, ideal para
+                        internet rápida e redes de grande porte.<br>
+
+                        📏 Longas distâncias
+
+                        A fibra consegue transmitir dados por quilômetros sem perda significativa de sinal, diferente
+                        dos cabos metálicos, que sofrem atenuação em distâncias menores.<br>
+
+                        🛡 Imune a interferência
+
+                        Por usar luz, a fibra óptica não sofre interferência eletromagnética, não é afetada por ruídos
+                        elétricos, motores, rádios ou descargas elétricas, garantindo mais estabilidade e segurança.<br>
+
+                        👉 Onde é usada?
+
+                        ✔ Internet de alta velocidade (FTTH)
+                        ✔ Backbones de operadoras
+                        ✔ Data centers e redes corporativas
+                    </p>
+                </article>
+
+                <article class="slide" data-index="4" aria-hidden="true">
+                    <img src="img/Conect.png" alt="Conectores">
+                    <h2>Conectores</h2>
+                    <p>
+                        Os conectores são os componentes responsáveis por ligar os cabos aos equipamentos de rede,
+                        permitindo a transmissão dos dados.<br>
+
+                        <strong>🔌 RJ-45 </strong>→ Redes Ethernet<br>
+
+                        O RJ-45 é o conector padrão das redes cabeadas Ethernet.
+                        Ele é usado com cabos de par trançado (Cat5e, Cat6, Cat6a).<br>
+
+                        ✔ Conecta computadores, switches, roteadores e modems<br>
+                        ✔ Muito comum em redes domésticas, escolares e empresariais<br>
+                        ✔ Fácil de instalar e baixo custo <br>
+
+                        <strong>🔦 SC / LC</strong> → Fibra Óptica<br>
+
+                        Os conectores SC e LC são utilizados em cabos de fibra óptica, responsáveis por alinhar
+                        corretamente a fibra para a passagem da luz.<br>
+
+                        ✔ SC (Subscriber Connector)
+
+                        Maior e mais robusto
+
+                        Muito usado em provedores e data centers
+
+                        ✔ LC (Lucent Connector)
+
+                        Menor e mais moderno
+
+                        Ideal para equipamentos de alta densidade
+                    </p>
+                </article>
+
+                <article class="slide" data-index="5" aria-hidden="true">
+                    <img src="img/padroes.png" alt="padroes de rede">
+                    <h2>Padrões de Rede</h2>
+                    <p>
+                        Os padrões de rede definem regras e especificações técnicas para que diferentes equipamentos
+                        consigam se comunicar corretamente em uma rede, mesmo sendo de fabricantes diferentes.<br>
+
+                        🔌 IEEE 802.3 → Ethernet
+
+                        O IEEE 802.3 é o padrão que define as redes Ethernet cabeadas.
+
+                        ✔ Utiliza cabos (par trançado ou fibra óptica)
+                        ✔ Oferece alta velocidade e estabilidade
+                        ✔ Muito usado em redes locais (LAN), empresas e data centers<br>
+
+                        Exemplos de velocidades:<br>
+
+                        100 Mbps<br>
+
+                        1 Gbps<br>
+
+                        10 Gbps ou mais<br>
+
+                        📡 IEEE 802.11 → Wi-Fi
+
+                        O IEEE 802.11 é o padrão das redes sem fio (Wi-Fi).
+
+                        ✔ Comunicação por ondas de rádio
+                        ✔ Permite mobilidade (notebooks, celulares, tablets)
+                        ✔ Muito usado em casas, escolas e locais públicos<br>
+
+                        Exemplos de versões:<br>
+
+                        802.11n<br>
+
+                        802.11ac<br>
+
+                        802.11ax (Wi-Fi 6)<br>
+                    </p>
+                </article>
+
+            </div>
+
+            <button class="nav next" aria-label="Próximo slide">&#10095;</button>
+            <div class="dots" id="dots"></div>
+        </section>
+
+        <section class="notes card">
+            <h3>Atividade</h3>
+            <ul>
+                <li>Qual cabo é mais usado em redes locais?</li>
+                <li>Qual meio oferece maior velocidade?</li>
+                <li>Explique a função do conector RJ-45.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="topbar">
+        <p>Curso Bônus – Redes • Aula 05</p>
+    </footer>
+
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>
